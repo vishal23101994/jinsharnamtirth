@@ -233,7 +233,7 @@ export default function PulakSagarPage() {
                 <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#FFD97A]/50 via-[#FFF6C5]/40 to-transparent blur-md"></div>
 
                 <Image
-                  src="/images/DSC_3635.jpg"
+                  src="/images/DSC_3635.JPG"
                   alt="Acharyashri Pulak Sagar Ji"
                   width={340}
                   height={500}

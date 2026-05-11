@@ -43,12 +43,12 @@ export default function BookingPage() {
     {
       title: "Bhojanshala",
       images: [
-        "images/booking/bhojanshala/1.jpg",
-        "images/booking/bhojanshala/2.jpg",
-        "images/booking/bhojanshala/3.jpg",
-        "images/booking/bhojanshala/4.jpg",
-        "images/booking/bhojanshala/5.jpg",
-        "images/booking/bhojanshala/6.jpg",
+        "images/booking/bhojanshala/1.JPG",
+        "images/booking/bhojanshala/2.JPG",
+        "images/booking/bhojanshala/3.JPG",
+        "images/booking/bhojanshala/4.JPG",
+        "images/booking/bhojanshala/5.JPG",
+        "images/booking/bhojanshala/6.JPG",
       ],
       description:
         "Large bhojanshala for devotees and group meal arrangements during yatras and events.",
@@ -71,11 +71,11 @@ export default function BookingPage() {
       images: [
         "images/booking/vip/1.jpeg",
         "images/booking/vip/2.jpeg",
-        "images/booking/vip/3.jpg",
+        "images/booking/vip/3.JPG",
       ],
       gallery: [
         "images/booking/vip/gallery1.jpeg",
-        "images/booking/vip/gallery2.jpg",
+        "images/booking/vip/gallery2.JPG",
       ],
       description:
         "Premium spiritual stay experience with peaceful ambience and modern comfort.",
@@ -85,9 +85,9 @@ export default function BookingPage() {
     {
       title: "Delux Room",
       images: [
-        "images/booking/delux/1.jpg",
-        "images/booking/delux/2.jpg",
-        "images/booking/delux/3.jpg",
+        "images/booking/delux/1.JPG",
+        "images/booking/delux/2.JPG",
+        "images/booking/delux/3.JPG",
       ],
       description:
         "Comfortable deluxe rooms ideal for families and long spiritual stays.",
@@ -122,10 +122,10 @@ export default function BookingPage() {
       title: "Party Hall",
       images: [
         "images/booking/partyhall/1.jpeg",
-        "images/booking/partyhall/2.jpg",
-        "images/booking/partyhall/3.jpg",
+        "images/booking/partyhall/2.JPG",
+        "images/booking/partyhall/3.JPG",
         "images/booking/partyhall/4.jpeg",
-        "images/booking/partyhall/5.jpg",
+        "images/booking/partyhall/5.JPG",
       ],
       description:
         "Spacious indoor hall for religious functions, bhajan, weddings, and family events.",
@@ -133,7 +133,7 @@ export default function BookingPage() {
     },
     {
       title: "Ahaarkaksh",
-      images: ["images/booking/ahaarkaksh/1.jpg"],
+      images: ["images/booking/ahaarkaksh/1.JPG"],
       description:
         "Peaceful dining space serving pure satvik Jain meals in a spiritual environment.",
       category: "Dining",
