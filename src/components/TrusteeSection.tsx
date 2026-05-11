@@ -91,7 +91,9 @@ export default function TrusteeSection() {
                 {/* Name */}
 
                 <h3 className="text-[20px] font-semibold text-[#1f1f1f] mb-1">
-                  {titleCase(t.name)}
+                  {t.gender?.toLowerCase() === "female"
+                    ? `Smt. ${titleCase(t.name)}`
+                    : `Shri ${titleCase(t.name)}`}
                 </h3>
 
                 {/* Designation */}

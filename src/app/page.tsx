@@ -5,7 +5,6 @@ import { MapPin } from "lucide-react";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import DonationSection from "../components/DonationSection";
-import TrusteeSection from "../components/TrusteeSection";
 
 /* ---------------- HERO ---------------- */
 
@@ -280,7 +279,6 @@ export default function Home() {
       <AboutSection />
       <PulakSagarMessage />
       <GlimpsesSection />
-      <TrusteeSection />
       <DonationSection />
 
     </main>

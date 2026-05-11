@@ -33,7 +33,7 @@ function MissionHero() {
           transition={{ duration:1 }}
           className="text-5xl md:text-7xl font-serif tracking-wide"
         >
-          Our Mission
+          Jinsharnam Chatravaas
         </motion.h1>
 
         <motion.p

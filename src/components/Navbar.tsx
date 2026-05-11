@@ -13,8 +13,11 @@ export default function Navbar() {
   const menu = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Our Mission", path: "/mission" },
+    { name: "Pulak Sagar", path: "/pulak-sagar" },
+    { name: "Chatravaas", path: "/mission" },
     { name: "Our Work", path: "/work" },
+    { name: "Booking", path: "/booking" },
+    { name: "Our Trustees", path: "/our-trustees" },
     { name: "Contact", path: "/contact" },
   ];
 
