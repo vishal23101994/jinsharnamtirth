@@ -10,7 +10,7 @@ function MissionHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
 
       <motion.img
-        src="/images/chatravaas.JPG"
+        src="/images/chatravaas.jpg"
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
         transition={{ duration: 6 }}
