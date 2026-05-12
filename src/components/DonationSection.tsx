@@ -192,14 +192,14 @@ export default function DonationSection() {
 
           {/* Bank Info */}
 
-          <div className="text-[#4B1E00]/85 text-sm leading-relaxed space-y-4">
+          <div className="text-[#4B1E00]/85 text-sm leading-relaxed space-y-4 text-left">
 
             {/* Account Name */}
 
             <div className="flex justify-between items-center border-b pb-2">
 
               <div>
-                <span className="font-semibold">Account Name:</span> Jinsharnam Tirth Trust
+                <span className="font-semibold">Account Name:</span> <br/> SHRI DIGAMBAR JAIN JINSHARNAM TIRTH TRUST
               </div>
 
               <button
@@ -217,7 +217,7 @@ export default function DonationSection() {
             <div className="flex justify-between items-center border-b pb-2">
 
               <div>
-                <span className="font-semibold">Bank:</span> State Bank of India
+                <span className="font-semibold">Bank:</span> Canara Bank
               </div>
 
               <button
@@ -235,7 +235,7 @@ export default function DonationSection() {
             <div className="flex justify-between items-center border-b pb-2">
 
               <div>
-                <span className="font-semibold">Account No:</span> 12345678901
+                <span className="font-semibold">Account No:</span> 2565201000951
               </div>
 
               <button
@@ -253,7 +253,7 @@ export default function DonationSection() {
             <div className="flex justify-between items-center">
 
               <div>
-                <span className="font-semibold">IFSC:</span> SBIN000000
+                <span className="font-semibold">IFSC:</span> CNRB0002565
               </div>
 
               <button

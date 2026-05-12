@@ -49,6 +49,8 @@ export default function BookingPage() {
         "images/booking/bhojanshala/4.JPG",
         "images/booking/bhojanshala/5.JPG",
         "images/booking/bhojanshala/6.JPG",
+        "images/booking/bhojanshala/7.JPEG",
+        "images/booking/bhojanshala/8.JPG",
       ],
       description:
         "Large bhojanshala for devotees and group meal arrangements during yatras and events.",
@@ -124,8 +126,6 @@ export default function BookingPage() {
         "images/booking/partyhall/1.jpeg",
         "images/booking/partyhall/2.JPG",
         "images/booking/partyhall/3.JPG",
-        "images/booking/partyhall/4.jpeg",
-        "images/booking/partyhall/5.JPG",
       ],
       description:
         "Spacious indoor hall for religious functions, bhajan, weddings, and family events.",
@@ -148,18 +148,18 @@ export default function BookingPage() {
     },
     {
       meal: "Lunch",
-      timing: "12:00 PM – 2:30 PM",
+      timing: "11:00 PM – 1:00 PM",
       details: "Pure satvik Jain lunch available for devotees.",
     },
     {
       meal: "Dinner",
-      timing: "7:00 PM – 9:00 PM",
+      timing: "5:00 PM – 7:00 PM",
       details: "Healthy and hygienic Jain dinner service.",
     },
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#FFFDF9] via-[#FFF8ED] to-[#FFF3E4] min-h-screen text-[#3B1D00] overflow-hidden">
+    <div className="bg-gradient-to-b from-[#FFFDF9] via-[#FFF8ED] to-[#FFF3E4] min-h-screen text-[#3B1D00] overflow-hidden pt-10">
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
@@ -721,11 +721,11 @@ export default function BookingPage() {
                 <div>
 
                   <h3 className="text-3xl font-serif text-white mb-2">
-                    Shree Rajesh Jain
+                    Shree Pushkal Jain
                   </h3>
 
                   <p className="text-amber-300 text-lg">
-                    Tirth Booking Manager
+                    Manager
                   </p>
 
                 </div>
@@ -759,26 +759,40 @@ export default function BookingPage() {
                     </p>
 
                     <p className="text-white text-lg tracking-wide">
-                      +91 98765 43210
+                      +91 7987176553
                     </p>
 
                   </div>
 
                 </div>
 
-                <div className="
-                  bg-white/5 rounded-2xl
-                  px-6 py-5
-                  border border-white/10
-                ">
+                <div
+                  className="
+                    flex items-start gap-5
+                    bg-white/5
+                    border border-white/10
+                    rounded-2xl
+                    px-6 py-5
+                    backdrop-blur-sm
+                  "
+                >
 
-                  <p className="text-gray-400 text-sm mb-2">
-                    Alternate Contact
-                  </p>
+                  <Phone
+                    className="w-5 h-5 text-amber-300 mt-1"
+                    strokeWidth={1.7}
+                  />
 
-                  <p className="text-white text-xl">
-                    +91 91234 56789
-                  </p>
+                  <div>
+
+                    <p className="text-gray-400 text-sm mb-1">
+                      Alternate Contact
+                    </p>
+
+                    <p className="text-white text-lg tracking-wide">
+                      +91 8799598079
+                    </p>
+
+                  </div>
 
                 </div>
 
@@ -793,7 +807,7 @@ export default function BookingPage() {
                   </p>
 
                   <p className="text-white text-xl break-all">
-                    booking@jinsharnamtirth.org
+                    pushkaljain1@gmail.com
                   </p>
 
                 </div>

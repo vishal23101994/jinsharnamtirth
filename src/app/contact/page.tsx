@@ -48,7 +48,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="text-gray-800 bg-gradient-to-b from-amber-50 via-white to-amber-50">
+      <section className="text-gray-800 bg-gradient-to-b from-amber-50 via-white to-amber-50 pt-28">
 
         {/* HEADER */}
 

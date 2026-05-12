@@ -88,7 +88,7 @@ export default function PulakSagarPage() {
 
   const [zoom, setZoom] = useState(1);
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#FFF9EF] via-[#FFE8B2] to-[#FFD580] text-[#3A0A00]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#FFF9EF] via-[#FFE8B2] to-[#FFD580] text-[#3A0A00] pt-32">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/swastik-pattern.png')] opacity-10 bg-cover bg-center pointer-events-none" />
 
@@ -113,7 +113,7 @@ export default function PulakSagarPage() {
 
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
-                href="/media/videos"
+                href="https://jinsharnammedia.com/media/videos"
                 className="inline-block rounded-full bg-[#FBBF24] px-6 py-2 font-semibold text-[#3A0A00] shadow hover:scale-[1.02] transition"
               >
                 Watch Pravachans →

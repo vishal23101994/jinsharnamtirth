@@ -7,14 +7,14 @@ import DonationSection from "../../components/DonationSection";
 
 function MissionHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
 
       <motion.img
-        src="/images/tirth/57.jpeg"
+        src="/images/chatravaas.JPG"
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
         transition={{ duration: 6 }}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="pt-32 absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Dark overlay */}

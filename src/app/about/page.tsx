@@ -7,7 +7,7 @@ import DonationSection from "../../components/DonationSection";
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
 
       {/* BACKGROUND IMAGE WITH SLOW ZOOM */}
 
