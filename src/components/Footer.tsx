@@ -8,7 +8,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Building2,
   ArrowRight,
 } from "lucide-react";
 
@@ -55,7 +54,7 @@ export default function Footer() {
             <div
               className="
                 relative
-                w-20 h-20 md:w-24 md:h-24
+                w-15 h-15 md:w-18 md:h-18
                 rounded-full
                 overflow-hidden
                 border border-amber-400/20
@@ -78,19 +77,21 @@ export default function Footer() {
 
           <h2
             className="
-              text-3xl sm:text-4xl md:text-3xl
+              text-2xl sm:text-2xl md:text-3xl
               font-serif
               text-[#F5D8AA]
               leading-tight
               mb-5 md:mb-6
+              whitespace-nowrap
             "
           >
-
-            Jinsharnam
-            <span className="block text-[#B8854A]">
+            <span className="text-[#F5D8AA]">
+              Jinsharnam
+            </span>{" "}
+            
+            <span className="text-[#B8854A]">
               Tirth Dham
             </span>
-
           </h2>
 
           {/* DESCRIPTION */}
@@ -144,86 +145,6 @@ export default function Footer() {
           </div>
 
         </div>
-
-        {/* ========================================================= */}
-        {/* QUICK LINKS */}
-        {/* ========================================================= */}
-
-        <div className="mt-20 md:mt-24 text-center">
-
-          <h3
-            className="
-              text-2xl md:text-2xl
-              font-serif
-              text-[#F5D8AA]
-              mb-10 md:mb-12
-            "
-          >
-
-            Quick Links
-
-          </h3>
-
-          <div
-            className="
-              grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
-              gap-y-5 md:gap-y-6
-              gap-x-4 md:gap-x-10
-              max-w-5xl mx-auto
-            "
-          >
-
-            {links.map(([name, href], i) => (
-
-              <Link
-                key={i}
-                href={href}
-                className="
-                  group
-                  flex items-center justify-center gap-2 md:gap-3
-                  text-[#D4BEA2]
-                  hover:text-[#F5D8AA]
-                  transition duration-300
-                  text-sm md:text-[15px]
-                "
-              >
-
-                <div
-                  className="
-                    w-1.5 h-1.5
-                    rounded-full
-                    bg-amber-500
-                    group-hover:scale-125
-                    transition
-                  "
-                ></div>
-
-                <span>{name}</span>
-
-                <ArrowRight
-                  className="
-                    hidden md:block
-                    w-4 h-4
-                    opacity-0
-                    -translate-x-2
-                    group-hover:translate-x-0
-                    group-hover:opacity-100
-                    transition duration-300
-                  "
-                  strokeWidth={1.7}
-                />
-
-              </Link>
-
-            ))}
-
-          </div>
-
-        </div>
-
-        {/* ========================================================= */}
-        {/* CONTACT SECTION */}
-        {/* ========================================================= */}
 
         <div className="mt-20 md:mt-24">
 
@@ -401,6 +322,82 @@ export default function Footer() {
         </div>
 
         {/* ========================================================= */}
+        {/* QUICK LINKS */}
+        {/* ========================================================= */}
+
+        <div className="mt-20 md:mt-24 text-center">
+
+          <h3
+            className="
+              text-2xl md:text-2xl
+              font-serif
+              text-[#F5D8AA]
+              mb-10 md:mb-12
+            "
+          >
+
+            Quick Links
+
+          </h3>
+
+          <div
+            className="
+              grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
+              gap-y-5 md:gap-y-6
+              gap-x-4 md:gap-x-10
+              max-w-5xl mx-auto
+            "
+          >
+
+            {links.map(([name, href], i) => (
+
+              <Link
+                key={i}
+                href={href}
+                className="
+                  group
+                  flex items-center justify-center gap-2 md:gap-3
+                  text-[#D4BEA2]
+                  hover:text-[#F5D8AA]
+                  transition duration-300
+                  text-sm md:text-[15px]
+                "
+              >
+
+                <div
+                  className="
+                    w-1.5 h-1.5
+                    rounded-full
+                    bg-amber-500
+                    group-hover:scale-125
+                    transition
+                  "
+                ></div>
+
+                <span>{name}</span>
+
+                <ArrowRight
+                  className="
+                    hidden md:block
+                    w-4 h-4
+                    opacity-0
+                    -translate-x-2
+                    group-hover:translate-x-0
+                    group-hover:opacity-100
+                    transition duration-300
+                  "
+                  strokeWidth={1.7}
+                />
+
+              </Link>
+
+            ))}
+
+          </div>
+
+        </div>        
+
+        {/* ========================================================= */}
         {/* CENTRAL OFFICE */}
         {/* ========================================================= */}
 
@@ -431,7 +428,7 @@ export default function Footer() {
 
               <div
                 className="
-                  w-20 h-20 md:w-24 md:h-24
+                  w-10 h-10 md:w-15 md:h-15
                   rounded-full
                   overflow-hidden
                   border border-amber-400/20

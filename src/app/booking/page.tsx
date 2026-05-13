@@ -41,50 +41,6 @@ export default function BookingPage() {
   const bookingOptions = [
 
     {
-      title: "Bhojanshala",
-      images: [
-        "images/booking/bhojanshala/1.JPG",
-        "images/booking/bhojanshala/2.JPG",
-        "images/booking/bhojanshala/3.JPG",
-        "images/booking/bhojanshala/4.JPG",
-        "images/booking/bhojanshala/5.JPG",
-        "images/booking/bhojanshala/6.JPG",
-        "images/booking/bhojanshala/7.JPEG",
-        "images/booking/bhojanshala/8.JPG",
-      ],
-      description:
-        "Large bhojanshala for devotees and group meal arrangements during yatras and events.",
-      category: "Dining Hall",
-    },
-
-    {
-      title: "Doormetry",
-      images: [
-        "images/booking/doormetry/1.jpeg",
-        "images/booking/doormetry/2.jpeg",
-      ],
-      description:
-        "Affordable dormitory accommodation for pilgrims and group visitors.",
-      category: "Stay",
-    },
-
-    {
-      title: "VIP Room",
-      images: [
-        "images/booking/vip/1.jpeg",
-        "images/booking/vip/2.jpeg",
-        "images/booking/vip/3.JPG",
-      ],
-      gallery: [
-        "images/booking/vip/gallery1.jpeg",
-        "images/booking/vip/gallery2.JPG",
-      ],
-      description:
-        "Premium spiritual stay experience with peaceful ambience and modern comfort.",
-      category: "Premium Stay",
-    },
-
-    {
       title: "Delux Room",
       images: [
         "images/booking/delux/1.JPG",
@@ -110,7 +66,34 @@ export default function BookingPage() {
     },
 
     {
-      title: "Lawn",
+      title: "VIP Room",
+      images: [
+        "images/booking/vip/1.jpeg",
+        "images/booking/vip/2.jpeg",
+        "images/booking/vip/3.JPG",
+      ],
+      gallery: [
+        "images/booking/vip/gallery1.jpeg",
+        "images/booking/vip/gallery2.JPG",
+      ],
+      description:
+        "Premium spiritual stay experience with peaceful ambience and modern comfort.",
+      category: "Premium Stay",
+    },
+
+    {
+      title: "Doormetry",
+      images: [
+        "images/booking/doormetry/1.jpeg",
+        "images/booking/doormetry/2.jpeg",
+      ],
+      description:
+        "Affordable dormitory accommodation for pilgrims and group visitors.",
+      category: "Stay",
+    },
+
+    {
+      title: "Party Lawn",
       images: [
         "images/booking/lawn/1.jpeg",
         "images/booking/lawn/2.jpeg",
@@ -131,6 +114,24 @@ export default function BookingPage() {
         "Spacious indoor hall for religious functions, bhajan, weddings, and family events.",
       category: "Event Hall",
     },
+
+    {
+      title: "Bhojanshala",
+      images: [
+        "images/booking/bhojanshala/1.JPG",
+        "images/booking/bhojanshala/2.JPG",
+        "images/booking/bhojanshala/3.JPG",
+        "images/booking/bhojanshala/4.JPG",
+        "images/booking/bhojanshala/5.JPG",
+        "images/booking/bhojanshala/6.JPG",
+        "images/booking/bhojanshala/7.JPEG",
+        "images/booking/bhojanshala/8.JPG",
+      ],
+      description:
+        "Large bhojanshala for devotees and group meal arrangements during yatras and events.",
+      category: "Dining Hall",
+    },   
+
     {
       title: "Ahaarkaksh",
       images: ["images/booking/ahaarkaksh/1.JPG"],
@@ -199,7 +200,7 @@ export default function BookingPage() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="relative z-20 text-center px-6 max-w-6xl pt-28"
+          className="relative z-20 text-center px-4 sm:px-6 max-w-6xl pt-28"
         >
 
           {/* LABEL */}
@@ -235,7 +236,7 @@ export default function BookingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
             className="
-              text-5xl md:text-7xl lg:text-8xl
+              text-4xl sm:text-5xl md:text-7xl lg:text-8xl
               font-serif
               text-amber-100
               leading-[1.05]
@@ -260,9 +261,9 @@ export default function BookingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
             className="
-              text-lg md:text-2xl
+              text-base sm:text-lg md:text-2xl
               text-amber-100/90
-              leading-10
+              leading-8 sm:leading-9 md:leading-7 sm:leading-8 md:leading-10
               max-w-4xl
               mx-auto
               font-light
@@ -286,7 +287,12 @@ export default function BookingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className="flex flex-wrap justify-center gap-6 mt-14"
+            className="
+              flex flex-col sm:flex-row
+              items-center justify-center
+              gap-4 sm:gap-6
+              mt-10 sm:mt-14                            
+            "
           >
 
             <a
@@ -294,7 +300,7 @@ export default function BookingPage() {
               className="
                 bg-amber-600 hover:bg-amber-700
                 text-white
-                px-10 py-5
+                px-7 sm:px-10 py-4 sm:py-5
                 rounded-full
                 text-lg
                 font-medium
@@ -336,7 +342,7 @@ export default function BookingPage() {
 
       {/* INTRO SECTION */}
 
-      <section className="py-32 px-6">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-4 sm:px-6">
 
         <div className="max-w-6xl mx-auto text-center">
 
@@ -344,7 +350,7 @@ export default function BookingPage() {
             Welcome To Jinsharnamtirth
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-serif text-[#4B1E00] leading-tight mt-6 mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#4B1E00] leading-tight mt-6 mb-10">
 
             A Perfect Blend of
             <span className="block text-amber-700">
@@ -353,7 +359,7 @@ export default function BookingPage() {
 
           </h2>
 
-          <p className="text-xl text-gray-600 leading-10 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-8 sm:leading-9 md:leading-7 sm:leading-8 md:leading-10 max-w-4xl mx-auto">
 
             From peaceful accommodation and bhojanshala facilities to premium
             spiritual stay experiences and event spaces, Jinsharnamtirth provides
@@ -369,7 +375,7 @@ export default function BookingPage() {
       {/* Booking Options */}
       <section
         id="facility-details"
-        className="max-w-7xl mx-auto px-6 py-24 scroll-mt-32"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-24 scroll-mt-32"
       >
 
         <div className="text-center mb-20">
@@ -391,7 +397,7 @@ export default function BookingPage() {
 
             <div
               key={i}
-              className="grid lg:grid-cols-2 gap-10 items-center bg-white/90 backdrop-blur-xl rounded-[40px] overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.08)] border border-white hover:scale-[1.01] transition duration-500"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center bg-white/90 backdrop-blur-xl rounded-[24px] md:rounded-[40px] overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.08)] border border-white hover:scale-[1.01] transition duration-500"
             >
 
               {/* LEFT IMAGE SECTION */}
@@ -403,7 +409,7 @@ export default function BookingPage() {
                   alt={item.title}
                   onClick={() => openGallery(item.images, 0)}
                   className="
-                    w-full h-[550px] object-cover
+                    w-full h-[260px] sm:h-[400px] md:h-[550px] object-cover
                     hover:scale-105 transition duration-700
                     cursor-pointer
                   "
@@ -413,7 +419,7 @@ export default function BookingPage() {
 
                 {item.images.length > 1 && (
 
-                  <div className="absolute bottom-4 left-4 right-4 grid grid-cols-4 gap-3">
+                  <div className="absolute bottom-4 left-4 right-4 grid grid-cols-4 gap-2 sm:gap-3">
 
                     {item.images.slice(1, 5).map((img, idx) => (
 
@@ -423,7 +429,7 @@ export default function BookingPage() {
                         alt=""
                         onClick={() => openGallery(item.images, idx + 1)}
                         className="
-                          h-20 w-full object-cover rounded-xl
+                          h-14 sm:h-20 w-full object-cover rounded-xl
                           border-2 border-white
                           hover:scale-105 hover:border-amber-400
                           transition duration-300
@@ -441,17 +447,17 @@ export default function BookingPage() {
 
               {/* RIGHT CONTENT */}
 
-              <div className="p-10 lg:p-14">
+              <div className="p-5 sm:p-8 lg:p-14">
 
                 <span className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium">
                   {item.category}
                 </span>
 
-                <h3 className="text-4xl font-serif text-[#3B1D00] mt-6 mb-5">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#3B1D00] mt-6 mb-5">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 leading-8 text-lg mb-8">
+                <p className="text-gray-600 leading-7 sm:leading-8 text-sm sm:text-base md:text-lg mb-8">
                   {item.description}
                 </p>
 
@@ -478,21 +484,21 @@ export default function BookingPage() {
 
                 {/* FEATURES */}
 
-                <div className="grid grid-cols-2 gap-4 mb-10 text-gray-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-10 text-gray-700">
 
-                  <div className="bg-[#FFF8ED] p-4 rounded-2xl">
+                  <div className="bg-[#FFF8ED] p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                     ✔ Peaceful Environment
                   </div>
 
-                  <div className="bg-[#FFF8ED] p-4 rounded-2xl">
+                  <div className="bg-[#FFF8ED] p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                     ✔ Jain Food Available
                   </div>
 
-                  <div className="bg-[#FFF8ED] p-4 rounded-2xl">
+                  <div className="bg-[#FFF8ED] p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                     ✔ Family Friendly
                   </div>
 
-                  <div className="bg-[#FFF8ED] p-4 rounded-2xl">
+                  <div className="bg-[#FFF8ED] p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                     ✔ Advance Booking
                   </div>
 
@@ -521,7 +527,7 @@ export default function BookingPage() {
 
       {/* Meal Timings */}
 
-      <section className="relative py-32 px-6 overflow-hidden">
+      <section className="relative py-32 px-4 sm:px-6 overflow-hidden">
 
         {/* BACKGROUND EFFECT */}
 
@@ -554,7 +560,7 @@ export default function BookingPage() {
 
           {/* TIMING CARDS */}
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
 
             {mealTimings.map((meal, i) => (
 
@@ -577,7 +583,7 @@ export default function BookingPage() {
 
                 {/* CONTENT */}
 
-                <div className="p-10 text-center">
+                <div className="p-6 sm:p-8 md:p-10 text-center">
 
                   {/* ICON */}
 
@@ -613,7 +619,7 @@ export default function BookingPage() {
 
                   {/* TITLE */}
 
-                  <h3 className="text-3xl font-serif text-[#4B1E00] mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-serif text-[#4B1E00] mb-4">
                     {meal.meal}
                   </h3>
 
@@ -623,7 +629,7 @@ export default function BookingPage() {
                     inline-block
                     bg-amber-100
                     text-amber-800
-                    px-6 py-3
+                    px-4 sm:px-6 py-3
                     rounded-full
                     text-lg font-medium
                     mb-8
@@ -655,7 +661,7 @@ export default function BookingPage() {
 
       <section
         id="contact-section"
-        className="relative py-32 px-6 overflow-hidden"
+        className="relative py-32 px-4 sm:px-6 overflow-hidden"
       >
 
         {/* BACKGROUND */}
@@ -690,15 +696,15 @@ export default function BookingPage() {
 
           {/* MAIN GRID */}
 
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
 
             {/* CONTACT CARD */}
 
             <div className="
               bg-white/10 backdrop-blur-xl
               border border-white/10
-              rounded-[40px]
-              p-10 md:p-14
+              rounded-[24px] md:rounded-[40px]
+              p-5 sm:p-8 md:p-14
               shadow-2xl
             ">
 
@@ -720,7 +726,7 @@ export default function BookingPage() {
 
                 <div>
 
-                  <h3 className="text-3xl font-serif text-white mb-2">
+                  <h3 className="text-2xl font-serif text-white mb-2">
                     Shree Pushkal Jain
                   </h3>
 
@@ -742,7 +748,7 @@ export default function BookingPage() {
                     bg-white/5
                     border border-white/10
                     rounded-2xl
-                    px-6 py-5
+                    px-4 sm:px-6 py-5
                     backdrop-blur-sm
                   "
                 >
@@ -772,7 +778,7 @@ export default function BookingPage() {
                     bg-white/5
                     border border-white/10
                     rounded-2xl
-                    px-6 py-5
+                    px-4 sm:px-6 py-5
                     backdrop-blur-sm
                   "
                 >
@@ -798,7 +804,7 @@ export default function BookingPage() {
 
                 <div className="
                   bg-white/5 rounded-2xl
-                  px-6 py-5
+                  px-4 sm:px-6 py-5
                   border border-white/10
                 ">
 
@@ -1016,7 +1022,7 @@ export default function BookingPage() {
                 absolute bottom-8 left-1/2
                 -translate-x-1/2
                 bg-white/10 backdrop-blur-md
-                text-white px-6 py-3 rounded-full
+                text-white px-4 sm:px-6 py-3 rounded-full
                 text-sm tracking-wide
               "
             >

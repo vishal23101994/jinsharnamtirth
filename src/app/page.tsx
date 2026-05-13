@@ -5,6 +5,35 @@ import { MapPin } from "lucide-react";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import DonationSection from "../components/DonationSection";
+import LatestUpdatesSection from "../components/LatestUpdatesSection";
+import PulakSagarLiveSection from "../components/PulakSagarLiveSection";
+
+
+export default function Home() {
+  return (
+    <main className="bg-gradient-to-b from-[#FFF8E7] to-white text-[#4B1E00]">
+
+      <HeroSection />
+      <AboutSection />
+      <WorkIntro/>
+      <PulakSagarMessage />
+      <LatestUpdatesSection />
+
+      {/* Live Pravachan / Events */}
+      <PulakSagarLiveSection />
+
+      
+
+      {/* Latest News / Updates */}
+      
+
+      <GlimpsesSection />
+
+      <DonationSection />
+
+    </main>
+  );
+}
 
 /* ---------------- HERO ---------------- */
 
@@ -62,7 +91,7 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-42 px-6">
 
       <div className="max-w-4xl mx-auto text-center">
 
@@ -70,7 +99,7 @@ function AboutSection() {
           Jinsharnam Tirth Dham
         </h2>
 
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="font-serif text-lg text-gray-700 leading-relaxed">
           Jinsharnam Tirth is a sacred Jain pilgrimage destination dedicated
           to devotion, meditation and spiritual upliftment. It serves as a
           center for peace, wisdom and service under the divine guidance of <br/>
@@ -79,10 +108,78 @@ function AboutSection() {
 
       </div>
 
-      {/* Divider */}
+    </section>
+  );
+}
 
-      <div className="flex justify-center mt-20">
-        <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+function WorkIntro() {
+  return (
+    <section className="py-24 px-20 bg-gradient-to-b from-[#FFF8E7] to-white">
+
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+
+        {/* Image */}
+
+        <motion.div
+          initial={{ opacity:0, x:-80 }}
+          whileInView={{ opacity:1, x:0 }}
+          transition={{ duration:1 }}
+          className="group"
+        >
+          <img
+            src="/images/tirth/12.1.jpeg"
+            className="
+              h-[580px]
+              w-[500px]
+              object-cover
+              rounded-2xl
+              shadow-[0_40px_100px_rgba(0,0,0,0.25)]
+              border-4 border-amber-300
+              group-hover:scale-[1.03]
+              transition duration-700
+              "
+          />
+        </motion.div>
+
+
+        {/* Text */}
+
+        <motion.div
+          initial={{ opacity:0, x:80 }}
+          whileInView={{ opacity:1, x:0 }}
+          transition={{ duration:1 }}
+        >
+
+          <h2 className="text-4xl md:text-5xl font-serif mb-8">
+            Service Inspired by Compassion
+          </h2>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Jinsharnam Tirth Dham believes that spirituality must go
+            beyond rituals and prayers. True spirituality is expressed
+            through compassion, service and dedication towards the
+            welfare of society.
+          </p>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            Inspired by the teachings of Jain philosophy, the initiatives
+            of Jinsharnam Tirth aim to uplift communities, support
+            students in their education, care for animals through Gau
+            Seva and create a deeper spiritual connection within
+            individuals.
+          </p>
+
+
+          {/* Quote highlight */}
+
+          <div className="bg-[#FFF4D6] border-l-4 border-amber-400 p-6 rounded-lg shadow-sm italic text-gray-700">
+            “Service to living beings is the highest form of devotion.
+            When compassion becomes our action, spirituality becomes
+            meaningful.”
+          </div>
+
+        </motion.div>
+
       </div>
 
     </section>
@@ -266,21 +363,5 @@ function GlimpsesSection() {
       )}
 
     </section>
-  );
-}
-
-/* ---------------- MAIN ---------------- */
-
-export default function Home() {
-  return (
-    <main className="bg-gradient-to-b from-[#FFF8E7] to-white text-[#4B1E00]">
-
-      <HeroSection />
-      <AboutSection />
-      <PulakSagarMessage />
-      <GlimpsesSection />
-      <DonationSection />
-
-    </main>
   );
 }
