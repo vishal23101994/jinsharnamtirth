@@ -30,7 +30,7 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Pulak Sagar", path: "/pulak-sagar" },
     { name: "Chatravaas", path: "/mission" },
-    { name: "Our Work", path: "/work" },
+    // { name: "Our Work", path: "/work" },
     { name: "Booking", path: "/booking" },
     { name: "Gallery", path: "/gallery" },
     { name: "Trustees", path: "/our-trustees" },
@@ -111,7 +111,7 @@ export default function Navbar() {
 
               <h1
                 className="
-                  text-[22px]
+                  text-[18px] xl:text-[22px]
                   leading-none
                   font-serif
                   text-[#F7D9A7]
@@ -132,7 +132,7 @@ export default function Navbar() {
           {/* DESKTOP MENU */}
           {/* ===================================================== */}
 
-          <div className="hidden lg:flex items-center gap-1 ml-6">
+          <div className="hidden xl:flex items-center gap-1 ml-4">
 
             {menu.map((item) => {
 
@@ -145,7 +145,7 @@ export default function Navbar() {
                   href={item.path}
                   className={`
                     relative
-                    px-4 py-2.5
+                    px-3 xl:px-4 py-2
                     rounded-full
                     text-[14px]
                     font-serif
@@ -207,7 +207,7 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="
-              lg:hidden
+              xl:hidden
               w-12 h-12
               rounded-2xl
               border border-white/10
@@ -236,7 +236,7 @@ export default function Navbar() {
 
       <div
         className={`
-          lg:hidden
+          xl:hidden
           overflow-hidden
           transition-all duration-500
           ${

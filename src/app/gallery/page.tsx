@@ -1,446 +1,201 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-import {
-  Download,
-  X,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Download, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GalleryPage() {
 
+  const [activeCategory, setActiveCategory] = useState<string>("Pulak Sagar Ji");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const [images, setImages] = useState<string[]>([]);
 
-  /* LOAD ONLY TIRTH IMAGES */
+  const categories = [
+    "Pulak Sagar Ji",
+    // "Motivational Thoughts",
+    "Jinsharnam Tirth",
+    // "Vatsalya Dhara Trust",
+    // "Logos & Identity",
+  ];
 
   useEffect(() => {
+    const folderMap: Record<string, string> = {
+      "Pulak Sagar Ji": "maharaj",
+      "Motivational Thoughts": "thoughts",
+      "Jinsharnam Tirth": "tirth",
+      "Vatsalya Dhara Trust": "vatsalya",
+      "Logos & Identity": "logo",
+    };
 
-    fetch(`/api/gallery/tirth`)
+    const folder = folderMap[activeCategory];
+
+    fetch(`/api/gallery/${folder}`)
       .then((res) => res.json())
       .then((data) => {
-
         if (Array.isArray(data)) {
           setImages(data);
         } else {
-          setImages([]);
+          console.error("Gallery API returned invalid data:", data);
+          setImages([]); // prevent crash
         }
-
       })
-      .catch(() => setImages([]));
+      .catch((err) => {
+        console.error("Gallery fetch error:", err);
+        setImages([]);
+      });
 
-  }, []);
+  }, [activeCategory]);
 
-  /* OPEN IMAGE */
 
   const openImage = (index: number) => {
-
     setSelectedImage(images[index]);
-
     setCurrentIndex(index);
-
   };
-
-  /* CLOSE */
 
   const closeLightbox = () => setSelectedImage(null);
 
-  /* NEXT */
-
   const nextImage = () => {
-
     const total = images.length;
-
     const newIndex = (currentIndex + 1) % total;
-
     setCurrentIndex(newIndex);
-
     setSelectedImage(images[newIndex]);
-
   };
-
-  /* PREV */
 
   const prevImage = () => {
-
     const total = images.length;
-
     const newIndex = (currentIndex - 1 + total) % total;
-
     setCurrentIndex(newIndex);
-
     setSelectedImage(images[newIndex]);
-
   };
 
-  /* DOWNLOAD */
-
   const downloadImage = () => {
-
     const link = document.createElement("a");
-
     link.href = selectedImage!;
-
     link.download = selectedImage!.split("/").pop()!;
-
     link.click();
-
   };
 
   return (
+    <section className="relative min-h-screen py-52 bg-gradient-to-b from-[#FFF6D8] via-[#FFE8A3] to-[#FFF1D0] overflow-hidden text-center">
+      
+      <div className="absolute inset-0 bg-[url('/swastik-pattern.png')] opacity-10 bg-cover bg-center" />
 
-    <section
-      className="
-      relative
-      min-h-screen
-      pt-52
-      pb-24
-      overflow-hidden
-      bg-gradient-to-b
-      from-[#FFF8E7]
-      via-[#FFF3D6]
-      to-[#FDE8BF]
-      "
-    >
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="font-serif text-5xl md:text-6xl text-[#7A1A00] mb-12 drop-shadow-md relative z-10"
+      >
+        Gallery of Motivational Moments
+      </motion.h1>
 
-      {/* BACKGROUND EFFECT */}
-
-      <div
-        className="
-        absolute inset-0
-        bg-[url('/swastik-pattern.png')]
-        opacity-[0.04]
-        bg-cover
-        bg-center
-        "
-      />
-
-      {/* HEADER */}
-
-      <div className="relative z-10 text-center px-6">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-
-          <p
-            className="
-            text-[#B7791F]
-            tracking-[5px]
-            uppercase
-            text-xs
-            md:text-sm
-            mb-5
-            "
+      {/* Category Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
+        {categories.map((cat) => (
+          <motion.button
+            key={cat}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-6 py-2 rounded-full border-2 font-medium transition-all ${
+              activeCategory === cat
+                ? "bg-gradient-to-r from-[#FBBF24] to-[#F59E0B] text-[#3A0A00] border-[#C45A00] shadow-lg"
+                : "bg-white/70 text-[#4B1E00] border-[#ECA400]/40 hover:bg-[#FFF0C2]"
+            }`}
           >
-
-            Sacred Moments & Divine Architecture
-
-          </p>
-
-          <h1
-            className="
-            font-serif
-            text-5xl
-            md:text-7xl
-            text-[#5B1D00]
-            leading-tight
-            "
-          >
-
-            Jinsharnam Tirth
-            <span className="block text-[#D89A2B]">
-              Gallery
-            </span>
-
-          </h1>
-
-          <p
-            className="
-            max-w-3xl
-            mx-auto
-            mt-8
-            text-[#6B4A2E]
-            leading-9
-            text-[16px]
-            md:text-lg
-            "
-          >
-
-            Explore the divine beauty, spiritual atmosphere,
-            sacred architecture, and peaceful surroundings of
-            Jinsharnam Tirth Dham.
-
-          </p>
-
-        </motion.div>
-
+            {cat}
+          </motion.button>
+        ))}
       </div>
 
-      {/* GALLERY GRID */}
-
+      {/* Image grid */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="
-        relative z-10
-        max-w-7xl
-        mx-auto
-        px-4
-        md:px-6
-        mt-20
-        grid
-        grid-cols-2
-        md:grid-cols-3
-        lg:grid-cols-4
-        gap-5
-        md:gap-7
-        "
+        key={activeCategory}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5 relative z-10"
       >
-
-        {images.map((src, i) => (
-
+        {Array.isArray(images) && images.map((src, i) => (
           <motion.div
             key={i}
-            whileHover={{ y: -8 }}
-            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.04 }}
             onClick={() => openImage(i)}
-            className="
-            group
-            relative
-            overflow-hidden
-            rounded-[28px]
-            cursor-pointer
-            bg-white
-            border border-white/40
-            shadow-[0_15px_40px_rgba(120,70,10,0.12)]
-            "
+            className="relative group overflow-hidden rounded-2xl border-[2px] border-[#FBBF24]/40 shadow-[0_0_25px_-10px_rgba(196,90,0,0.3)] hover:shadow-[0_0_40px_-10px_rgba(255,191,36,0.5)] cursor-pointer bg-[#FFFDF5]"
           >
-
-            <div className="overflow-hidden">
-
-              <Image
-                src={src}
-                alt={`Gallery ${i + 1}`}
-                width={500}
-                height={500}
-                className="
-                w-full
-                h-[220px]
-                md:h-[280px]
-                object-cover
-                transition-transform
-                duration-700
-                group-hover:scale-110
-                "
-              />
-
-            </div>
-
-            {/* PREMIUM OVERLAY */}
-
-            <div
-              className="
-              absolute inset-0
-              bg-gradient-to-t
-              from-black/70
-              via-black/10
-              to-transparent
-              opacity-0
-              group-hover:opacity-100
-              transition duration-500
-              "
+            <Image
+              src={src}
+              alt={`${activeCategory} ${i + 1}`}
+              width={350}
+              height={250}
+              className="object-cover w-full h-[160px] md:h-[180px] lg:h-[200px] transition-transform duration-500 group-hover:scale-105"
             />
-
-            <div
-              className="
-              absolute bottom-0 left-0 right-0
-              p-5
-              translate-y-10
-              group-hover:translate-y-0
-              opacity-0
-              group-hover:opacity-100
-              transition duration-500
-              "
-            >
-
-              <p
-                className="
-                text-white
-                text-sm
-                tracking-[3px]
-                uppercase
-                "
-              >
-
-                Jinsharnam Tirth
-
-              </p>
-
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3A0A00]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-2">
+              <p className="text-white text-xs tracking-wide">{activeCategory}</p>
             </div>
-
           </motion.div>
-
         ))}
-
       </motion.div>
 
-      {/* LIGHTBOX */}
-
+      {/* Lightbox */}
       <AnimatePresence>
-
         {selectedImage && (
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="
-            fixed inset-0
-            bg-black/90
-            backdrop-blur-xl
-            z-50
-            flex items-center justify-center
-            p-4 md:p-10
-            "
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
           >
-
             <motion.div
-              initial={{ scale: 0.92 }}
+              initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.92 }}
+              exit={{ scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="
-              relative
-              w-full
-              max-w-6xl
-              "
+              className="relative max-w-4xl w-full bg-[#FFFDF5]/10 backdrop-blur-md rounded-3xl border border-[#FFD97A]/40 shadow-[0_0_40px_rgba(255,217,122,0.4)] overflow-hidden"
             >
-
-              {/* IMAGE */}
-
               <Image
                 src={selectedImage}
-                alt="Selected"
-                width={1400}
-                height={900}
-                className="
-                w-full
-                h-[80vh]
-                object-contain
-                rounded-[32px]
-                "
+                alt="Selected image"
+                width={1200}
+                height={800}
+                className="object-contain w-full h-[75vh]"
               />
 
-              {/* TOP CONTROLS */}
-
-              <div
-                className="
-                absolute top-5 right-5
-                flex items-center gap-3
-                "
-              >
-
+              {/* Controls */}
+              <div className="absolute top-4 right-4 flex space-x-3">
                 <button
                   onClick={downloadImage}
-                  className="
-                  w-12 h-12
-                  rounded-full
-                  bg-white/10
-                  hover:bg-white/20
-                  backdrop-blur-md
-                  border border-white/10
-                  flex items-center justify-center
-                  transition
-                  "
+                  className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition"
                 >
-
-                  <Download className="w-5 h-5 text-white" />
-
+                  <Download className="text-white w-5 h-5" />
                 </button>
-
                 <button
                   onClick={closeLightbox}
-                  className="
-                  w-12 h-12
-                  rounded-full
-                  bg-white/10
-                  hover:bg-red-500
-                  backdrop-blur-md
-                  border border-white/10
-                  flex items-center justify-center
-                  transition
-                  "
+                  className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition"
                 >
-
-                  <X className="w-5 h-5 text-white" />
-
+                  <X className="text-white w-5 h-5" />
                 </button>
-
               </div>
-
-              {/* PREV */}
 
               <button
                 onClick={prevImage}
-                className="
-                absolute left-3 md:left-6
-                top-1/2 -translate-y-1/2
-                w-14 h-14
-                rounded-full
-                bg-white/10
-                hover:bg-white/20
-                backdrop-blur-md
-                border border-white/10
-                flex items-center justify-center
-                transition
-                "
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/20 rounded-full hover:bg-white/40 transition"
               >
-
-                <ChevronLeft className="w-7 h-7 text-white" />
-
+                <ChevronLeft className="text-white w-6 h-6" />
               </button>
-
-              {/* NEXT */}
 
               <button
                 onClick={nextImage}
-                className="
-                absolute right-3 md:right-6
-                top-1/2 -translate-y-1/2
-                w-14 h-14
-                rounded-full
-                bg-white/10
-                hover:bg-white/20
-                backdrop-blur-md
-                border border-white/10
-                flex items-center justify-center
-                transition
-                "
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/20 rounded-full hover:bg-white/40 transition"
               >
-
-                <ChevronRight className="w-7 h-7 text-white" />
-
+                <ChevronRight className="text-white w-6 h-6" />
               </button>
 
             </motion.div>
-
           </motion.div>
-
         )}
-
       </AnimatePresence>
-
     </section>
   );
 }

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
+import PulakSagarLiveSection from "../../components/PulakSagarLiveSection";
 import {
   BookOpen,
   Calendar,
@@ -278,6 +279,8 @@ export default function PulakSagarPage() {
           </div>
         </motion.div>
       </section>
+
+      <PulakSagarLiveSection />
 
 
 

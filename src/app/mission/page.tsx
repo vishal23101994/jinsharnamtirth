@@ -130,9 +130,45 @@ function MissionPillars() {
       img: "/images/tirth/36.jpeg",
     },
     {
-      title: "Service to Humanity",
-      text: "Serving society with compassion and kindness through humanitarian initiatives inspired by the principle of Ahimsa.",
+      title: "Student Education",
+      text: "We support students by helping them pursue quality education and develop strong values that guide them throughout life.",
+      img: "/images/tirth/34.jpeg",
+    },
+
+    {
+      title: "Food for Students",
+      text: "Nutritious meals are provided to students so they can focus on their studies without worrying about basic necessities.",
       img: "/images/tirth/31.jpeg",
+    },
+
+    {
+      title: "Bus Service",
+      text: "Transportation facilities help students reach educational institutions safely and conveniently.",
+      img: "/images/tirth/43.jpeg",
+    },
+
+    {
+      title: "Chatravas",
+      text: "Accommodation facilities ensure that students from different regions can stay comfortably and pursue their education.",
+      img: "/images/tirth/26.jpeg",
+    },
+
+    {
+      title: "Motivation & Guidance",
+      text: "Students and devotees receive guidance and inspiration that encourages them to follow the path of discipline, positivity and purpose.",
+      img: "/images/tirth/44.jpeg",
+    },
+
+    {
+      title: "Cultural Programs",
+      text: "Spiritual and cultural programs strengthen traditional values and inspire communities to remain connected with their heritage.",
+      img: "/images/tirth/37.jpeg",
+    },
+
+    {
+      title: "Community Welfare",
+      text: "Various social initiatives support the well-being of the community through compassion, charity and collective service.",
+      img: "/images/tirth/38.jpeg",
     },
   ];
 

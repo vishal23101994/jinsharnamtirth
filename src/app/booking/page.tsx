@@ -144,17 +144,17 @@ export default function BookingPage() {
   const mealTimings = [
     {
       meal: "Breakfast",
-      timing: "7:00 AM – 9:00 AM",
+      timing: "8:30 AM – 10:00 AM",
       details: "Fresh vegetarian breakfast served daily.",
     },
     {
       meal: "Lunch",
-      timing: "11:00 PM – 1:00 PM",
+      timing: "12:30 PM – 2:00 PM",
       details: "Pure satvik Jain lunch available for devotees.",
     },
     {
       meal: "Dinner",
-      timing: "5:00 PM – 7:00 PM",
+      timing: "5:30 PM – 7:00 PM",
       details: "Healthy and hygienic Jain dinner service.",
     },
   ];

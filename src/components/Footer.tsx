@@ -18,7 +18,7 @@ export default function Footer() {
     ["About", "/about"],
     ["Pulak Sagar", "/pulak-sagar"],
     ["Chatravaas", "/mission"],
-    ["Our Work", "/work"],
+    // ["Our Work", "/work"],
     ["Booking", "/booking"],
     ["Gallery", "/gallery"],
     ["Trustees", "/our-trustees"],

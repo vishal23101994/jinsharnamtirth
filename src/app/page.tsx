@@ -6,8 +6,6 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import DonationSection from "../components/DonationSection";
 import LatestUpdatesSection from "../components/LatestUpdatesSection";
-import PulakSagarLiveSection from "../components/PulakSagarLiveSection";
-
 
 export default function Home() {
   return (
@@ -17,12 +15,7 @@ export default function Home() {
       <AboutSection />
       <WorkIntro/>
       <PulakSagarMessage />
-      <LatestUpdatesSection />
-
-      {/* Live Pravachan / Events */}
-      <PulakSagarLiveSection />
-
-      
+      <LatestUpdatesSection />    
 
       {/* Latest News / Updates */}
       

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function OurTrusteesPage() {
   return (
-    <main className="min-h-screen bg-white pt-28">
+    <main className="min-h-screen bg-white pt-20">
       <TrusteeSection />
     </main>
   );
