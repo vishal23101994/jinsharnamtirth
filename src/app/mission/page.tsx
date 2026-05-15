@@ -144,7 +144,7 @@ function MissionPillars() {
     {
       title: "Bus Service",
       text: "Transportation facilities help students reach educational institutions safely and conveniently.",
-      img: "/images/tirth/43.jpeg",
+      img: "/images/tirth/43.1.jpeg",
     },
 
     {

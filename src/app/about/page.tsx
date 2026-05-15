@@ -7,7 +7,7 @@ import DonationSection from "../../components/DonationSection";
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28 px-4">
 
       {/* BACKGROUND IMAGE WITH SLOW ZOOM */}
 
@@ -51,7 +51,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
           className="
-          text-5xl md:text-7xl lg:text-6xl
+          text-4xl sm:text-5xl md:text-6xl lg:text-7xl
           font-serif
           text-amber-100
           drop-shadow-[0_15px_40px_rgba(0,0,0,0.9)]
@@ -80,7 +80,8 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
           className="
-          text-md md:text-xl
+          text-base sm:text-base sm:text-lg md:text-xl
+          px-2 leading-7 md:leading-relaxed
           text-amber-200
           leading-relaxed
           font-serif
@@ -102,7 +103,7 @@ function HeroSection() {
       <motion.div
         animate={{ y: [0, 12, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 text-amber-200 text-xl"
+        className="absolute bottom-6 md:bottom-10 text-amber-200 text-base sm:text-lg md:text-xl"
       >
         ↓
       </motion.div>
@@ -115,15 +116,15 @@ function HeroSection() {
 
 function IntroSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white px-4">
 
       <div className="max-w-4xl mx-auto px-6 text-center">
 
-        <h2 className="text-4xl font-serif mb-8 text-[#4B1E00]">
+        <h2 className="text-3xl sm:text-4xl font-serif mb-6 md:mb-8 text-[#4B1E00]">
           Jinsharnam Tirth
         </h2>
 
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="font-serif text-base sm:text-lg text-gray-700 leading-7 md:leading-relaxed">
         Jinsharnam Tirth is a sacred sanctuary where spirituality,
         peace and devotion come together. It is a place where the
         mind finds stillness and the soul discovers its true path.
@@ -145,15 +146,15 @@ function IntroSection() {
 
 function RoshaniSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="float-left w-full md:w-[800px] mr-8 mb-6">
+        <div className="float-none md:float-left w-full md:w-[800px] md:mr-8 mb-6">
 
         <motion.img
         src="/images/tirth/2.jpeg"
@@ -174,7 +175,7 @@ function RoshaniSection() {
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -186,14 +187,14 @@ function RoshaniSection() {
 
 
         {/* TEXT */}
-        <h2 className="text-4xl md:text-5xl
+        <h2 className="text-3xl sm:text-4xl md:text-5xl
                     font-[var(--font-hindi)]
                     text-[#7a1c1c]
                     tracking-wide mb-4">
           कौन हूँ मैं?
         </h2>
 
-        <p className="text-lg md:text-xl
+        <p className="text-base sm:text-lg md:text-xl
                       text-gray-700
                       leading-relaxed
                       tracking-wide
@@ -204,7 +205,7 @@ function RoshaniSection() {
 
         <br/>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं जिनशरणं हूँ, सुकून और शांति का अद्भूत संगम हूँ। मुझ से भवसागर तिरने का रास्ता मिलता है। 
           मेरी माटी का जो स्पर्श करता है, अनायास ही बर्हियात्री अंर्तयात्री हो जाता है। वह आत्मान्वेषी हो जाता है। 
           प्राकृतिक सौंदर्य की बात करो तो मेरे चारों तरफ दूर दूर तक हरियाली ही हरियाली है। 
@@ -229,15 +230,15 @@ function RoshaniSection() {
 
 function AshirvadSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="float-right w-full md:w-[400px] ml-8 mb-6">
+        <div className="float-none md:float-right w-full md:w-[400px] md:ml-8 mb-6">
 
         <motion.img
         src="/images/tirth/80.jpg"
@@ -258,7 +259,7 @@ function AshirvadSection() {
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -274,13 +275,13 @@ function AshirvadSection() {
           मंगल आशीर्वाद
         </h2>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           असीम प्रेम,
         </p>
 
         <br/>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मुनि पुलक सागर जी को मंगल आशीर्वाद। भव्य तीर्थ के सृजन की भावना सुनकर आनंदित हैं। 
           परोक्ष रुप से समाचार मिल रहे थे। सुनकर मन प्रसन्न था और है। साधु-संस्कृति और धर्म का 
           संवाहक होता है तुम्हारे अन्दर वह क्षमता विद्यमान है। मेरा हार्दिक मंगलाशीष है। 
@@ -289,7 +290,7 @@ function AshirvadSection() {
           यही सोच कर दूध तुम्हारे शक्कर भरे हाथों में सौंप रहा हूँ।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मंगलाशीव पुष्पदन्त <br />
         </p>
 
@@ -306,13 +307,13 @@ function AshirvadSection() {
 
 function AkinchanyaSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[400px] mr-8 mb-6">
 
@@ -331,11 +332,10 @@ function AkinchanyaSection() {
         transition-all duration-700
         object-cover"
         />
-
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -347,7 +347,7 @@ function AkinchanyaSection() {
         
 
         {/* TEXT */}
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं घर बना रहा हूँ किसी और के लिए, खुद को मिटा रहा हूँ किसी और के लिए मैंने तो कांटो में गुजारी है जिंदगी, 
           पत्थर हटा रहा हूँ किसी और के लिए...
         </p>
@@ -356,7 +356,7 @@ function AkinchanyaSection() {
           मैं अकिंचन्य ही हूँ
         </h2>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मेरा अंतःस्थल हमेशा ही निर्माण और विस्तार के विपक्ष में रहा है। मैं खुद समझ नहीं पा रहा हूँ कि इसे हालात कहूँ, 
           मन की विवशता कहूँ, या अतिधर्मानुराग कहूँ, या फिर नियति का फैसला ही मान लूँ। बहुत टाला, बहुत बचने का प्रयास 
           किया फिर भी नियति ने मुझे अपने पक्ष में कर ही लिया। अब मुझे ऐसा लगता है जैसे मैं कुछ नहीं कर रहा हूँ नियति ही 
@@ -365,7 +365,7 @@ function AkinchanyaSection() {
 
         <br/>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           आशीर्वाद मेरे पूज्य गुरुदेव आचार्यश्री पुष्पदंत सागरजी महाराज का है। भूमि, पानी, पत्थर, वृक्ष ये सब तो प्रकृति प्रदत्त है। 
           ईट, मिट्टी, सीमेंट सब मानवी अविष्कार है। धन धनपतियों का है, दानियों का है। आकार इंजीनियरों का मस्तिष्क है। 
           श्रम श्रमिको का है और समर्पण जिनभक्तों का है। ये सब बिखरे हुये थे, प्रकृति ने मुझे इनका संकलन व संयोजन 
@@ -386,15 +386,15 @@ function AkinchanyaSection() {
 
 function AdinathSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="float-right w-full md:w-[400px] ml-8 mb-6">
+        <div className="float-none md:float-right w-full md:w-[400px] md:ml-8 mb-6">
 
         <motion.img
         src="/images/tirth/1.jpeg"
@@ -419,13 +419,13 @@ function AdinathSection() {
           भूगर्भ प्रकट, अतिशयकारी भगवान आदिनाथ स्वामी
         </h2>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मध्य प्रदेश के आष्टा नगर में एक मुस्लिम परिवार के गृह नींव खनन के समय प्रकट हुए कृपासिन्धु प्रथम तीर्थंकर श्री आदिनाथ (ऋषभदेव) भगवान। 
           जिनकी यह मनोहारी वीतराग दिगम्बर जिन प्रतिमा है। <br/>इनके दर्शन मात्र से मनोकामनाएँ स्वतः पूर्ण हाने लगती है। 
           इन्हीं की पावन निश्रा आशीर्वाद से तीर्थंधाम जिनशरणं का सृजन सहजता से सम्पन्न हो सका।
         </p>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           "बाबा के दर पर आने तक, लोग बहुत मजबूर होते हैं। बाबा के दर पर आकर, लोग कुछ और होते है।"
         </p>
 
@@ -442,13 +442,13 @@ function AdinathSection() {
 
 function MulnayakSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[400px] mr-8 mb-6">
 
@@ -471,7 +471,7 @@ function MulnayakSection() {
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -486,11 +486,11 @@ function MulnayakSection() {
           मूलनायक तीर्थाधिपति कल्पतरू पार्श्वनाथ भगवान 
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूँ मैं?  
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं आचार्यश्री पुलक सागरजी गुरुदेव जी के मानस पटल पर उभरी हुई कल्पनाओं का समस्त जिनभक्तों के लिए एक 
           अकल्पनीय जिनवैभव युक्त अष्टधातु से निर्मित 13 फीट अवगाहना लिए वीतराग भगवान पार्श्वनाथ की एक जिनप्रतिमा हूँ। 
           वीतरागता और वैभव कितना विरोधाभास है मुझमें, पर अतिशयोक्ति नहीं जिन्होंने मेरे इस स्वरूप को जाना है, समझा है, 
@@ -512,13 +512,13 @@ function MulnayakSection() {
 
 function MuktaSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[500px] ml-8 mb-6">
 
@@ -541,7 +541,7 @@ function MuktaSection() {
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -555,7 +555,7 @@ function MuktaSection() {
           मुक्ताकाश त्रिमूर्ति
         </h2>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           जिनशरणं के मुक्ताकाश में त्रिमूर्ति भगवान विराजित है भगवान आदिनाथ, शातिनाथ भगवान और महावीर स्वामी 
           भगवान की परिकर 21 फीट अवगाहना से सुशोभित है, दक्षिण भारत उत्तर भारत शिल्प कला के अदभुत समागम दिव्य दर्शन यहाँ होते है। 
           जहां समय-समय पर वार्षिक उत्सव, पंच वर्षीय उत्सव एवं बारह वर्षीय महोत्सव एवं महामस्तकाभिषेक के कार्यक्रम समर्पित होते है।
@@ -563,7 +563,7 @@ function MuktaSection() {
 
         <br/>
 
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           जिनशरणं में हर रोज जैन धर्म को एक उत्सव की तरह मनाया जाता है।
         </p>
 
@@ -580,13 +580,13 @@ function MuktaSection() {
 
 function MukhritSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[500px] mr-8 mb-6">
 
@@ -609,7 +609,7 @@ function MukhritSection() {
         <p className="
         text-center
         mt-3
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -623,11 +623,11 @@ function MukhritSection() {
           मुखरित भूखंड
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन था मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           एक ऐसा भूखंड, मुझमें सावन तो था, पर मैं पावन नहीं था, मैं निर्जर तो था, पर मुझमें निर्जरा नहीं थीं। मैं भीगता था, 
           पर धुलता नहीं था। धुलता भी कैसे, क्योंकि मेरे पास किसी तपस्वी के कमंडल का जल, किसी तीर्थंकर के गंधोदक का जल जो नहीं था। 
           जब-जब कोई व्यापारी मुझमें कोई कारखाना बनाना चाहता या कोई भवन निर्माता मुझमें नगर बसाना चाहता या कोई धनपति मुझमें होटल या 
@@ -637,7 +637,7 @@ function MukhritSection() {
           तपस्या करते है, पूज्य गुरुदेव ने मुझे बड़ी सरलता एवं सहजता से उन जिन तक पहुँचा दिया और मुझ भूखंड को जिनशरणं बना दिया।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           आप सोच रहे होंगे कि मैं इतने सालों से चुप बैठा, आज इतना कैसे बोल रहा हूँ वह इसलिए कि गुरुदेव ने अपने कदम मुझ पर रखकर मुझ बेजुबान को जुबान दे दी।
         </p>
 
@@ -654,13 +654,13 @@ function MukhritSection() {
 
 function VardaniSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[600px] ml-8 mb-2">
 
@@ -683,7 +683,7 @@ function VardaniSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -697,11 +697,11 @@ function VardaniSection() {
           वरदानी नैसर्गिक कल्पवृक्ष
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन कहता है?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           सपने साकार नहीं होते, जिन जननी के तो सोलह स्वप्न साकार होते हैं। मैं भी एक सपना बनकर नींद में नहीं बल्कि गुरुदेव के ध्यान में एक बार नहीं, 
           कई बार आया हूँ और मैंने उनका ध्यान अपनी ओर आकर्षित कराया है। जब गुरुदेव आँख बंद करते, तो मैं दृश्यमान हो जाता, आँखे खोलते ओझल हो 
           जाता पर स्मृतियों में बना रहता। मेरी स्मृतियाँ मुझे तलाशने के लिए उन्हें मजबूर करतीं और मैं भी सत्य को जानते हूए उनका इंतजार करता। तलाश और 
@@ -724,12 +724,12 @@ function VardaniSection() {
 
 function SwarnimSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[600px] mr-8 mb-2">
 
@@ -752,7 +752,7 @@ function SwarnimSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -766,17 +766,17 @@ function SwarnimSection() {
           स्वर्णिम गजरथ जिनालय
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूँ मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं मंदिर हूं, देवालय हूँ, जिनालय हूँ, देरासर हूँ, कोईल हूँ, क्षेत्रम् हूँ, जिसने मुझे जिस नाम से पुकारा, मैं वही हूँ। पर इससे भी बड़ी बात मेरे लिये 
           है, कि मैं आचार्य श्री पुलकसागरजी गुरुदेव के स्वर्णिम स्वप्नों का स्वर्णिम गजरथ जिनालय हूँ। जमीन से उठाकर गुरुदेव ने मुझे 108 फीट 
           उत्तुंग मुक्त आकाश प्रदान किया।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मेरी लहराती ध्वजाएं, मुझ पर चढ़े हुए स्वर्ण कलश, मेरे आनंद की हिलोरे मुझे मंदिर में विराजमान मूलनायक तीर्थाधिपति जिनशरणं 
           कल्पतरु पारर्श्वनाथ जैसे परमानंद के स्रोत से जोड़ती है। जब हवायें मुझे छूती है, वे ही धन्य नहीं होती है, मुझे छूकर वे जिस - जिस को छूती है, 
           उन्हें भी धन्यता प्रदान करती है। स्वर्ग से उतरे हुए दो ऐरावत हाथी उस समय मेरे गौरव को बढ़ा देते हैं। जब स्वयं सौधर्म इंद्र सारथी बनकर मेरे 
@@ -796,13 +796,13 @@ function SwarnimSection() {
 
 function MaanstambhSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[600px] ml-8 mb-2">
 
@@ -825,7 +825,7 @@ function MaanstambhSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -839,11 +839,11 @@ function MaanstambhSection() {
           जिनसहस्त्रनाम 24 मानस्तंभ
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन है हम?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           हम है तीर्थाधिपति जिनशरण कल्पतरु पार्श्वनाथ के 1008 नामों के स्वरुप का एक स्थान पर दिव्यदर्शन कराने वाले 24 मानस्तंभ। 
           अभी तक हम सहस्रनाम स्तोत्र बनकर किताबों में बंद थे। हमारा स्थान मंदिरों की अलमारियां थी। कभी कभार कोई भक्त हमें पढ़ लेता, 
           पर जिनशरणं तीर्थ में भगवान के सहस्रनाम उजागर हो गये है। यहां हमें पढ़ा ही नहीं जाता, हमारे दर्शन भी किये जाते है। हमे जिया भी जाता है। 
@@ -865,13 +865,13 @@ function MaanstambhSection() {
 
 function DhyanmandirSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 
         <div className="float-left w-full md:w-[500px] mr-8 mb-2">
@@ -895,7 +895,7 @@ function DhyanmandirSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -909,23 +909,23 @@ function DhyanmandirSection() {
           ध्यान मंदिर
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूं मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं 'ध्यान मंदिर' हूँ, मैं आचार्यश्री पुलक सागरजी गुरुदेव के ध्यान में मेरा जन्म हुआ है।
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           भागती हुई दुनिया का ठहराव हूँ मैं, करोड़ों की भीड़ का एकांत हूँ मैं, भटके हुए लोगों की दिशा हूँ मैं!
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           गुरुदेव के कई वर्षों की तपस्या का फल हूँ मैं, और जो 'ध्यान' में लीन हो जाए उसके लिए आने वाला कल हूँ मैं!
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           यहाँ प्रार्थना नहीं, 'ध्यान' होता है! प्रार्थना वो होती है जब आप भगवान से कुछ कहते हैं, लेकिन 'ध्यान' तब होता है, जब भगवान आपसे कुछ कहते है।
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           दुनिया तो शब्द सुनती है, 'ध्यान मदिर' खामोशी भी सुन लेता है!
         </p>
 
@@ -942,18 +942,18 @@ function DhyanmandirSection() {
 
 function NavgrahSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[600px] ml-8 mb-2">
 
         <motion.img
-        src="/images/tirth/9.jpeg"
+        src="/images/tirth/9.1.jpeg"
         initial={{ opacity: 0, y: 80, scale:0.95 }}
         whileInView={{ opacity: 1, y:0, scale:1 }}
         viewport={{ once:true }}
@@ -971,7 +971,7 @@ function NavgrahSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -985,11 +985,11 @@ function NavgrahSection() {
           नवग्रहशान्ति जिनालय
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूँ मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           जिनशरणं का नवग्रहशाति जिनालय। ग्रह प्रकृति को प्रभावित करते है। मानव जीवन में भी उथल पुथल ग्रहों से आती है, जब कोई मानव 
           उन ग्रहों के स्वरूप को जानकर उन ग्रहों के प्रभाव को समझकर, उन ग्रहों के अधिष्ठाता देवाधिदेव तीर्थकरों की शरण में चला जाता है, 
           तब दुष्ट से दुष्ट ग्रह भी उसके जीवन में वरदान बन जाते है। तीर्थकरों की पूजा, विधान, भक्ति, मंत्र जाप, हवन, यज्ञ, मानव के अंतःस्थल 
@@ -1008,13 +1008,13 @@ function NavgrahSection() {
 
 function NirjaraSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 
         <div className="float-left w-full md:w-[500px] mr-8 mb-2">
@@ -1052,22 +1052,22 @@ function NirjaraSection() {
           निर्जरा कुटीर (गुरु भवन)
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूँ मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं निर्जरा कुटीर हूँ, पुराने कर्मों को बहाकर, मोक्ष मार्ग की ओर ले जाने वाली साधना स्थली। निर्जरा कुटीर जहाँ 
           'गुरु भगवंत' प्रवास करते हैं, साधना करते हैं।
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मेरा निर्माण आधुनिकता और पुरातन सभ्यता का बेजोड़ संगम है। यहाँ समता, वन्दना, स्तुति, स्वाध्याय, प्रतिक्रमण कायोत्सर्ग रहते है।
         </p>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           'जिनशरणं' की निर्जरा कुटीर 'कर्म' से 'धर्म' की ओर ले जाने वाली और फिर 'धर्म' की तपस्या करके 'मोक्ष' तक ले जाने वाली कुटीर है।
         </p>
         <br/><br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           * यह पूज्य गुरुदेव की साधना स्थली है।<br/>
           * इस कुटीर को वास्तु शिल्प द्वारा पाषाण से निर्मित किया है।<br/>
           * इसमें पूज्य गुरुदेव का स्वाध्याय कक्ष / विश्राम कक्ष / धर्म सभा कक्ष मौजूद है।
@@ -1086,13 +1086,13 @@ function NirjaraSection() {
 
 function AhaarSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 
         <div className="float-right w-full md:w-[400px] ml-8 mb-2">
@@ -1116,7 +1116,7 @@ function AhaarSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1130,7 +1130,7 @@ function AhaarSection() {
           आहार कक्ष (राजा श्रेयांस महल)
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं दान तीर्थ राजा श्रेयांस की स्मृति हूँ। मैं अक्षय दानशाला हूँ। नवधा भक्ति के स्वरों का गूजित आत्म संगीत हूँ। 
           मैं और मेरा रोम-रोम नमोस्तु-नमोस्तु कहकर अपने गुरुओं का पड़गाहन करता है। गुरु पूजन, वंदन, नमन, आहार कराकर 
           मैं महल के मंदिर जैसा महान हो जाता हूँ।
@@ -1148,13 +1148,13 @@ function AhaarSection() {
 
 function DevmatiSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 
         <div className="float-left w-full md:w-[600px] mr-8 mb-2">
@@ -1178,7 +1178,7 @@ function DevmatiSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1192,7 +1192,7 @@ function DevmatiSection() {
           आर्यिका माँ देवमति उपाश्रय
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           संत कभी निवास नहीं करते, वे तो प्रवास करते है। हकीकत में उनका निवास तो सिद्धालय है। जब तक सिद्धालय ना मिले, 
           तब तक वे लंबी दूरी की थकान मिटाने को अल्प प्रवास कर, अपने मोक्ष मार्ग को प्रशस्त करते है। जिसके लिए वो घरों में नहीं, 
           उपाश्रयों में रहते हैं। यह साधु संतों की उपाश्रय स्थली, साधना स्थली और समाधि स्थली है। जो दादी माँ आर्यिका देवमति के 
@@ -1211,13 +1211,13 @@ function DevmatiSection() {
 
 function GufaSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[400px] ml-8 mb-2">
 
@@ -1240,7 +1240,7 @@ function GufaSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1254,11 +1254,11 @@ function GufaSection() {
           सामायिक गुफा
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूँ मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           जिनशरणं के कोने में सबसे छुपी हुई एकांत में सामायिक गुफा के रूप में मेरा एक अस्तित्व है, मुझे एकांत पसंद है। मेरे आसपास का जो 
           वातावरण है, वह तपस्वियों के तपोवन जैसा है। दुनियाँ की भीड़ में रहकर भी अकेले रहने का अनुभव मेरे पास है। जब कोई आत्मपिपासु 
           नयन मूंदकर मेरे आगोश में आता है तो वह आत्मस्थ होने लगता है। और मेरे आनंद में डूब कर परमानंद को पा लेता है।
@@ -1276,13 +1276,13 @@ function GufaSection() {
 
 function TirthSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[600px] mr-8 mb-2">
 
@@ -1305,7 +1305,7 @@ function TirthSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1319,17 +1319,17 @@ function TirthSection() {
           आचार्य पुष्पदंत निलय
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           'जिनशरणं तीर्थ' तीर्थंकर, साधु संत और भक्तों की एक ऐसी त्रिवेणी है जहां भगवान की कृपा भी बहती है, साधु संत का आशीर्वाद 
           भी बहता है और भक्तों की असीम भक्ति भी बहती है। यहां बच्चे धर्म समझते हैं बड़े धर्म में लीन हो जाते हैं और बुजुर्ग 'जिन' की 
           शरण में खुद को समर्पित कर देते हैं। इसलिए मोक्षयात्री से लेकर तीर्थयात्री तक, हर किसी की सुविधा का यहां विशेष ध्यान रखा गया है।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           जिनशरणं में एक अतिथि निवास है, एक ऐसा अतिथि निवास जिसकी व्यवस्था का लाभनहीं रह जाता, बल्कि हमेशा के लिए उसका मन यही का हो जाता है!
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           लेकर एक अतिथि खुद अतिथि
         </p>
         {/* CLEAR FLOAT */}
@@ -1345,13 +1345,13 @@ function TirthSection() {
 
 function MatoshriSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[300px] ml-8 mb-2">
 
@@ -1374,7 +1374,7 @@ function MatoshriSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1388,11 +1388,11 @@ function MatoshriSection() {
           मातोश्री समाधि मंदिर
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन था मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           एक ऐसी माँ, जिसने अपनी जीवन में कई उतार चढाव देखे, लेकिन एक दिन वह परम सौभाग्यशाली हो गई, जब उसने संत 
           जैसी आत्मा को जन्म दिया। जिस माँ ने अपने बेटे को गुरु बनाया, उस गुरु ने अपनी माँ को वृति बनाकर मंदिर जैसा पूज्य बनाया। 
           आज भी उस मंदिर में (समाधि मंदिर में) अम्मा की आस्था की ज्योत जलती है। उस ज्योति में एक रोशनी है, जो रिश्तों के रास्तों को 
@@ -1411,13 +1411,13 @@ function MatoshriSection() {
 
 function SabhagarSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[600px] mr-8 mb-2">
 
@@ -1440,7 +1440,7 @@ function SabhagarSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1454,7 +1454,7 @@ function SabhagarSection() {
           सम्बोधि सभागार
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           'जिनशरणं' में एक खूबसूरत 'प्रवचन हॉल' का निर्माण भी किया गया है जहां एक वक्त में 500 लोग बैठकर साधु संत के प्रवचन का लाभलेकर खुद के जीवन को साकार कर सकते हैं!
         </p>
         {/* CLEAR FLOAT */}
@@ -1470,13 +1470,13 @@ function SabhagarSection() {
 
 function PrasadSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[600px] ml-8 mb-2">
 
@@ -1499,7 +1499,7 @@ function PrasadSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1513,7 +1513,7 @@ function PrasadSection() {
           प्रभु प्रसाद
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           'जिन' की शरण में आने वाले अतिथि के लिए उच्च व्यवस्था की गई है, यहां स्वरुचि भोजनालय है जहां प्रसाद रूपी उत्तम भोजन 
           जैन नियमों के अनुरूप मिलता है और 300 से 400 लोग एक साथ बैठकर प्रभु प्रसाद ग्रहण करते है।
         </p>
@@ -1530,13 +1530,13 @@ function PrasadSection() {
 
 function NilaySection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[600px] mr-8 mb-2">
 
@@ -1559,7 +1559,7 @@ function NilaySection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1573,7 +1573,7 @@ function NilaySection() {
           पुलक निलय
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           यह भव्य इमारत यात्री निवास है। इसमें वातानुकुलित कक्ष, भोजनशाला, विशाल प्रवचन हॉल, उत्सव भवन एवं लिफ्ट सुविधा युक्त है।
         </p>
         {/* CLEAR FLOAT */}
@@ -1589,13 +1589,13 @@ function NilaySection() {
 
 function ChatravasSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-right w-full md:w-[400px] ml-8 mb-2">
 
@@ -1618,7 +1618,7 @@ function ChatravasSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1632,20 +1632,20 @@ function ChatravasSection() {
           जिनशरणं छात्रावास
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कौन हूं मैं?
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           मैं 'जिनशरणम का छात्रावास हूँ, यूं तो एक विद्यालय भी हूँ, 'लाइफ लॉग एक्सपीरियंस' हूँ, संस्कार की ओर बढ़ा अपना 'सबसे पहला कदम' हूँ।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           बच्चों में जैन संस्कारों का पौधारोपण करना, शास्त्र के ज्ञान से जैन आचरण की जड़े मजबूत करना और उसमें शिक्षा के साथ-साथ धर्म के फल 
           भी ऊगाना मेरा लक्ष्य हैं।
         </p>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           तीर्थंकरों की आराधना से प्रभात सुप्रभात होती है। दिन को सही दिशा मिलती है, जलाभिषेक करके बच्चें अपनी सोच को गंधोदक की तरह पवित्र करते हैं। 
           संध्या वंदन के समय जिनराज की आरती और स्वाध्याय से शाम सजती है। जैन समाज का भविष्य यहाँ गढ़ा जाता है।
         </p>
@@ -1662,13 +1662,13 @@ function ChatravasSection() {
 
 function GaushalaSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[500px] mr-8 mb-2">
 
@@ -1691,7 +1691,7 @@ function GaushalaSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1705,7 +1705,7 @@ function GaushalaSection() {
           गौशाला
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           यह जीवन दायिनी, पंचामृत प्रदाय, पंचगव्य दाता, कामधेनु स्वरूप गौ माता का निवास स्थान है।
         </p>
         {/* CLEAR FLOAT */}
@@ -1721,13 +1721,13 @@ function GaushalaSection() {
 
 function BhavanSection() {
   return (
-    <section className="relative py-28 
+    <section className="relative py-16 md:py-28 
     bg-gradient-to-b 
     from-[#FFF8E7] 
     via-[#FFFDF6] 
     to-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="float-left w-full md:w-[500px] mr-8 mb-2">
 
@@ -1750,7 +1750,7 @@ function BhavanSection() {
         <p className="
         text-center
         mt-6
-        text-sm
+        text-xs sm:text-sm
         italic
         text-amber-800
         font-[var(--font-hindi)]
@@ -1764,7 +1764,7 @@ function BhavanSection() {
           उत्सव भवन (पार्टी हाल)
         </h2>
         <br/>
-        <p className="text-lg text-gray-700 leading-loose text-justify">
+        <p className="text-base sm:text-lg text-gray-700 leading-8 md:leading-loose text-justify break-words">
           कॉफ्रेंस, जन्मदिन, वैवाहिक वर्षगांठ, हल्दी मेंहदी आदि कार्यक्रमों के लिए यहाँ सुसज्जित व्यवस्था है।
         </p>
         {/* CLEAR FLOAT */}

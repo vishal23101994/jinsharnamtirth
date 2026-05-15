@@ -49,7 +49,8 @@ export default function LatestUpdatesSection() {
     if (!container) return;
 
     const interval = setInterval(() => {
-      const cardWidth = 286;
+      const cardWidth =
+        window.innerWidth < 640 ? 250 : 340;
 
       if (
         container.scrollLeft + container.clientWidth >=
@@ -73,7 +74,7 @@ export default function LatestUpdatesSection() {
   return (
     <>
       {/* ================= HOME ================= */}
-      <section className="relative py-42 overflow-hidden bg-gradient-to-b from-[#FFF8E7] via-[#FFF3D6] to-[#FDE8B4]">
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-[#FFF8E7] via-[#FFF3D6] to-[#FDE8B4]">
 
         {/* Soft Glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,215,120,0.25),transparent_60%)]" />
@@ -95,19 +96,28 @@ export default function LatestUpdatesSection() {
               Divine Updates
             </span>
 
-            <h2 className="
-              text-4xl md:text-6xl
-              font-serif
-              text-[#4B1E00]
-            ">
+            <h2 
+              className="
+                text-3xl sm:text-4xl md:text-6xl
+                font-serif
+                text-[#4B1E00]
+                leading-tight
+              "
+            >
               Jinsharnam Tirth Updates
             </h2>
 
-            <p className="
-              mt-5 max-w-2xl mx-auto
-              text-[#7A5A20]
-              text-[20px] leading-relaxed
-            ">
+            <p 
+              className="
+                font-serif
+                mt-4 md:mt-5
+                max-w-2xl mx-auto
+                text-[#7A5A20]
+                text-base sm:text-lg md:text-[20px]
+                leading-7 md:leading-relaxed
+                px-4
+              "
+            >
               Sacred moments, spiritual gatherings, seva activities,
               and divine memories from Jinsharnam Tirth Dham.
             </p>
@@ -118,10 +128,10 @@ export default function LatestUpdatesSection() {
           <div className="relative">
 
             {/* LEFT FADE */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 z-20 bg-gradient-to-r from-[#FFF8E7] to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-10 md:w-20 z-20 bg-gradient-to-r from-[#FFF8E7] to-transparent pointer-events-none" />
 
             {/* RIGHT FADE */}
-            <div className="absolute right-0 top-0 bottom-0 w-20 z-20 bg-gradient-to-l from-[#FFF8E7] to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 md:w-20 z-20 bg-gradient-to-l from-[#FFF8E7] to-transparent pointer-events-none" />
 
             {/* SCROLL CONTAINER */}
             <div className="relative">
@@ -135,8 +145,8 @@ export default function LatestUpdatesSection() {
                   })
                 }
                 className="
-                  absolute left-4 top-1/2 -translate-y-1/2 z-30
-                  w-14 h-14 rounded-full
+                  absolute left-1 md:left-4 top-1/2 -translate-y-1/2 z-30
+                  w-10 h-10 md:w-14 md:h-14 rounded-full
                   bg-white/75 backdrop-blur-2xl
                   border border-white/60
                   text-[#8A5A00]
@@ -146,7 +156,7 @@ export default function LatestUpdatesSection() {
                   hover:shadow-[0_15px_40px_rgba(255,190,50,0.25)]
                   transition-all duration-300
                   flex items-center justify-center
-                  text-2xl
+                  text-lg md:text-2xl
                 "
               >
                 ←
@@ -161,8 +171,8 @@ export default function LatestUpdatesSection() {
                   })
                 }
                 className="
-                  absolute right-4 top-1/2 -translate-y-1/2 z-30
-                  w-14 h-14 rounded-full
+                  absolute right-1 md:right-4 top-1/2 -translate-y-1/2 z-30
+                  w-10 h-10 md:w-14 md:h-14 rounded-full
                   bg-white/75 backdrop-blur-2xl
                   border border-white/60
                   text-[#8A5A00]
@@ -172,7 +182,7 @@ export default function LatestUpdatesSection() {
                   hover:shadow-[0_15px_40px_rgba(255,190,50,0.25)]
                   transition-all duration-300
                   flex items-center justify-center
-                  text-2xl
+                  text-lg md:text-2xl
                 "
               >
                 →
@@ -184,11 +194,12 @@ export default function LatestUpdatesSection() {
                 className="
                   flex gap-6
                   overflow-x-auto overflow-y-hidden
-                  px-16 py-4
+                  px-6 md:px-16 py-4
                   scroll-smooth
                   no-scrollbar
                   whitespace-nowrap
                   snap-x snap-mandatory
+                  [-webkit-overflow-scrolling:touch]
                 "
               >
 
@@ -206,8 +217,12 @@ export default function LatestUpdatesSection() {
                       viewport={{ once: true }}
                       whileHover={{ y: -8 }}
                       className="
-                        min-w-[320px]
-                        max-w-[320px]
+                        min-w-[240px]
+                        max-w-[240px]
+                        sm:min-w-[280px]
+                        sm:max-w-[280px]
+                        md:min-w-[320px]
+                        md:max-w-[320px]
                         rounded-[24px]
                         overflow-hidden
                         bg-white/60
@@ -230,7 +245,7 @@ export default function LatestUpdatesSection() {
                           setPosition({ x: 0, y: 0 });
                         }}
                         className="
-                          relative h-[250px]
+                          relative h-[190px] sm:h-[220px] md:h-[250px]
                           overflow-hidden cursor-pointer
                         "
                       >
@@ -255,7 +270,7 @@ export default function LatestUpdatesSection() {
                       </div>
 
                       {/* CONTENT */}
-                      <div className="p-5 flex flex-col min-h-[150px]">
+                      <div className="p-4 md:p-5 flex flex-col min-h-[130px] md:min-h-[150px]">
 
                         <div className="
                           inline-flex items-center gap-2
@@ -272,10 +287,10 @@ export default function LatestUpdatesSection() {
                         </div>
 
                         <h3 className="
-                          text-[20px]
+                          text-[16px] sm:text-[18px] md:text-[20px]
                           font-serif
                           text-[#4B1E00]
-                          leading-relaxed
+                          leading-7 md:leading-relaxed
                           tracking-[0.01em]
                           break-words
                           whitespace-normal
@@ -318,19 +333,19 @@ export default function LatestUpdatesSection() {
                 setZoomLevel(1);
                 setPosition({ x: 0, y: 0 });
               }}
-              className="absolute top-6 left-6 text-white text-3xl font-bold z-30"
+              className="absolute top-3 left-3 md:top-6 md:left-6 text-white text-2xl md:text-3xl font-bold z-30"
             >
               ✕
             </button>
 
             {/* ZOOM CONTROLS */}
-            <div className="absolute top-6 right-6 flex gap-3 z-30">
+            <div className="absolute top-3 right-3 md:top-6 md:right-6 flex gap-2 md:gap-3 z-30">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setZoomLevel((prev) => Math.min(prev + 0.3, 5));
                 }}
-                className="px-4 py-2 rounded-lg bg-black text-[#E6C97A] border border-[#CFA73C] hover:bg-[#1A1A1A] transition-all shadow"
+                className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-black text-[#E6C97A] border border-[#CFA73C] hover:bg-[#1A1A1A] transition-all shadow"
               >
                 +
               </button>
@@ -344,7 +359,7 @@ export default function LatestUpdatesSection() {
                     return newZoom;
                   });
                 }}
-                className="px-4 py-2 rounded-lg bg-black text-[#E6C97A] border border-[#CFA73C] hover:bg-[#1A1A1A] transition-all shadow"
+                className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-black text-[#E6C97A] border border-[#CFA73C] hover:bg-[#1A1A1A] transition-all shadow"
               >
                 −
               </button>
@@ -358,7 +373,7 @@ export default function LatestUpdatesSection() {
               <motion.img
                 src={zoomImage}
                 alt="Zoomed Update"
-                className="max-w-[90vw] max-h-[90vh] object-contain select-none"
+                className="max-w-[95vw] max-h-[85vh] md:max-w-[90vw] md:max-h-[90vh] object-contain select-none"
                 style={{
                   transform: `translate(${position.x}px, ${position.y}px) scale(${zoomLevel})`,
                   transition: isDragging.current ? "none" : "transform 0.2s ease-out",

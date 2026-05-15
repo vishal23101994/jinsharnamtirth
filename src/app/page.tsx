@@ -9,7 +9,7 @@ import LatestUpdatesSection from "../components/LatestUpdatesSection";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-[#FFF8E7] to-white text-[#4B1E00]">
+    <main className="bg-gradient-to-b from-[#FFF8E7] to-white text-[#4B1E00] overflow-hidden">
 
       <HeroSection />
       <AboutSection />
@@ -32,7 +32,7 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center justify-center pt-28">
+    <section className="relative min-h-[90vh] md:min-h-screen overflow-hidden flex items-center justify-center pt-24 md:pt-28 px-4">
 
       {/* Background image animation */}
 
@@ -58,7 +58,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-serif tracking-wide"
+          className="text-4xl sm:text-5xl md:text-7xl font-serif tracking-wide leading-tight"
         >
           Jinsharnam Tirth Dham
         </motion.h1>
@@ -67,7 +67,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="font-serif mt-6 max-w-xl text-lg md:text-xl text-amber-200 mx-auto"
+          className="font-serif mt-5 max-w-xl text-base sm:text-base sm:text-lg md:text-xl text-amber-200 mx-auto leading-relaxed"
         >
           A sacred sanctuary of peace and devotion guided by
           <br />
@@ -84,15 +84,15 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="py-42 px-6">
+    <section className="py-20 md:py-32 px-5 md:px-6">
 
       <div className="max-w-4xl mx-auto text-center">
 
-        <h2 className="text-4xl md:text-5xl font-serif mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 md:mb-8">
           Jinsharnam Tirth Dham
         </h2>
 
-        <p className="font-serif text-lg text-gray-700 leading-relaxed">
+        <p className="font-serif text-base sm:text-base sm:text-lg text-gray-700 leading-8">
           Jinsharnam Tirth is a sacred Jain pilgrimage destination dedicated
           to devotion, meditation and spiritual upliftment. It serves as a
           center for peace, wisdom and service under the divine guidance of <br/>
@@ -107,9 +107,9 @@ function AboutSection() {
 
 function WorkIntro() {
   return (
-    <section className="py-24 px-20 bg-gradient-to-b from-[#FFF8E7] to-white">
+    <section className="py-20 md:py-24 px-5 md:px-10 lg:px-20 bg-gradient-to-b from-[#FFF8E7] to-white overflow-hidden">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
 
         {/* Image */}
 
@@ -122,15 +122,18 @@ function WorkIntro() {
           <img
             src="/images/tirth/12.1.jpeg"
             className="
-              h-[580px]
-              w-[500px]
+              h-[340px]
+              sm:h-[420px]
+              md:h-[580px]
+              w-full
+              max-w-[500px]
               object-cover
               rounded-2xl
               shadow-[0_40px_100px_rgba(0,0,0,0.25)]
               border-4 border-amber-300
               group-hover:scale-[1.03]
               transition duration-700
-              "
+            "
           />
         </motion.div>
 
@@ -143,18 +146,18 @@ function WorkIntro() {
           transition={{ duration:1 }}
         >
 
-          <h2 className="text-4xl md:text-5xl font-serif mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 md:mb-8">
             Service Inspired by Compassion
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
             Jinsharnam Tirth Dham believes that spirituality must go
             beyond rituals and prayers. True spirituality is expressed
             through compassion, service and dedication towards the
             welfare of society.
           </p>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
             Inspired by the teachings of Jain philosophy, the initiatives
             of Jinsharnam Tirth aim to uplift communities, support
             students in their education, care for animals through Gau
@@ -183,16 +186,23 @@ function WorkIntro() {
 
 function PulakSagarMessage() {
   return (
-    <section className="bg-gradient-to-b from-[#FFF4D6] to-[#FFF8E7] py-32 px-6 border-y border-amber-300">
+    <section className="bg-gradient-to-b from-[#FFF4D6] to-[#FFF8E7] py-20 md:py-32 px-5 md:px-6 border-y border-amber-300 overflow-hidden">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
 
         <motion.img
           src="/images/maharaj/img1.jpeg"
           initial={{ opacity:0, x:-60 }}
           whileInView={{ opacity:1, x:0 }}
           transition={{ duration:1 }}
-          className="rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.2)] border-4 border-amber-300"
+          className="
+            rounded-2xl
+            shadow-[0_30px_80px_rgba(0,0,0,0.2)]
+            border-4 border-amber-300
+            w-full
+            max-w-[500px]
+            mx-auto
+          "
         />
 
         <motion.div
@@ -201,13 +211,13 @@ function PulakSagarMessage() {
           transition={{ duration:1 }}
         >
 
-          <p className="text-lg text-gray-700 mb-6 italic">
+          <p className="text-base sm:text-lg text-gray-700 mb-6 italic">
             “True spirituality lies in self-realization. When we learn to
             conquer our inner weaknesses, we begin to experience the divine
             peace that resides within us.”
           </p>
 
-          <p className="text-lg text-gray-700 italic">
+          <p className="text-base sm:text-lg text-gray-700 italic">
             “A temple is not merely a structure of stone. It is a sacred
             place where the soul connects with the infinite and discovers
             the path of compassion, discipline and truth.”
@@ -263,11 +273,11 @@ function GlimpsesSection() {
   };
 
   return (
-    <section className="py-32 overflow-hidden">
+    <section className="py-20 md:py-32 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-center mb-10 md:mb-16">
           Glimpses of Jinsharnam Tirth
         </h2>
 
@@ -304,7 +314,7 @@ function GlimpsesSection() {
             >
               <img
                 src={img}
-                className="w-[360px] h-[260px] object-cover"
+                className="w-[260px] sm:w-[320px] md:w-[360px] h-[190px] sm:h-[230px] md:h-[260px] object-cover"
               />
             </div>
           ))}
@@ -322,7 +332,7 @@ function GlimpsesSection() {
 
           <button
             onClick={() => setActiveIndex(null)}
-            className="absolute top-8 right-10 text-white text-4xl hover:scale-110"
+            className="absolute top-4 right-4 md:top-8 md:right-10 text-white text-3xl md:text-4xl hover:scale-110 z-50"
           >
             <X size={40} />
           </button>
@@ -331,9 +341,9 @@ function GlimpsesSection() {
 
           <button
             onClick={prevImage}
-            className="absolute left-10 text-white hover:scale-110"
+            className="absolute left-2 md:left-10 text-white hover:scale-110 z-50"
           >
-            <ChevronLeft size={60} />
+            <ChevronLeft size={36} className="md:w-[60px] md:h-[60px]" />
           </button>
 
           {/* Image */}
@@ -347,9 +357,9 @@ function GlimpsesSection() {
 
           <button
             onClick={nextImage}
-            className="absolute right-10 text-white hover:scale-110"
+            className="absolute right-2 md:right-10 text-white hover:scale-110 z-50"
           >
-            <ChevronRight size={60} />
+            <ChevronRight size={36} className="md:w-[60px] md:h-[60px]" />
           </button>
 
         </div>

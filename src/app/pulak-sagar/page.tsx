@@ -89,39 +89,39 @@ export default function PulakSagarPage() {
 
   const [zoom, setZoom] = useState(1);
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#FFF9EF] via-[#FFE8B2] to-[#FFD580] text-[#3A0A00] pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#FFF9EF] via-[#FFE8B2] to-[#FFD580] text-[#3A0A00] font-serif pt-24 md:pt-32">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/swastik-pattern.png')] opacity-10 bg-cover bg-center pointer-events-none" />
 
       {/* HERO (kept photo at top as requested) */}
-      <header className="relative max-w-7xl mx-auto px-6 pt-20 pb-12 z-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+      <header className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 md:pt-20 pb-10 md:pb-12 z-10">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-left"
           >
-            <h1 className="text-4xl md:text-5xl font-serif text-[#8B0000] leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#8B0000] leading-tight text-center md:text-left">
               Rashtrasant Manogyacharya <br/> Shree Pulak Sagar Ji Gurudev
             </h1>
 
-            <p className="mt-4 text-lg md:text-xl text-justify">
+            <p className="mt-4 text-base sm:text-lg md:text-xl font-serif text-left md:text-left md:text-justify leading-7 md:leading-relaxed">
               Pulak Sagar Ji is a revered <strong>Digambara Jain Sant</strong>. Gurudev’s inspiring
               <em> pravachans</em> are available on our YouTube channel
               <span className="font-semibold"> — Jinsharnam Media</span>.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
               <Link
                 href="https://jinsharnammedia.com/media/videos"
-                className="inline-block rounded-full bg-[#FBBF24] px-6 py-2 font-semibold text-[#3A0A00] shadow hover:scale-[1.02] transition"
+                className="inline-block rounded-full bg-[#FBBF24] px-5 md:px-6 py-2.5 text-sm md:text-base text-center font-semibold text-[#3A0A00] shadow hover:scale-[1.02] transition"
               >
                 Watch Pravachans →
               </Link>
               <Link
                 href="/contact"
-                className="inline-block rounded-full bg-[#C45A00] px-6 py-2 font-semibold text-white shadow hover:scale-[1.02] transition"
+                className="inline-block rounded-full bg-[#C45A00] px-5 md:px-6 py-2.5 text-sm md:text-base text-center font-semibold text-white shadow hover:scale-[1.02] transition"
               >
                 Invite for Discourse
               </Link>
@@ -135,14 +135,14 @@ export default function PulakSagarPage() {
             transition={{ duration: 0.9 }}
             className="relative flex justify-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD580]/40 to-transparent rounded-3xl blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD580]/40 to-transparent rounded-3xl blur-2xl md:blur-3xl"></div>
             <Image
               src="/images/b7.jpg"
               alt="Acharyashri Pulak Sagar Ji"
-              width={560}
+              width={520}
               height={420}
               priority
-              className="relative z-10 rounded-3xl border-4 border-[#C45A00]/40 shadow-2xl object-cover"
+              className="relative z-10 rounded-3xl border-4 border-[#C45A00]/40 shadow-2xl object-cover w-full max-w-[320px] sm:max-w-[420px] md:max-w-[560px] h-auto"
             />
           </motion.div>
         </div>
@@ -150,7 +150,7 @@ export default function PulakSagarPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-12 w-full md:max-w-xl mx-auto"
+          className="mt-10 md:mt-12 w-full md:max-w-xl mx-auto px-2"
         >
           <Link
             href="https://pulaksagar.com/"
@@ -158,9 +158,9 @@ export default function PulakSagarPage() {
             rel="noopener noreferrer"
             className="group block rounded-2xl border border-[#FFD700]/50 bg-gradient-to-r from-[#FFF8DC] via-[#FFE9A8] to-[#FFD580] p-5 shadow-[0_10px_30px_rgba(196,90,0,0.25)] hover:shadow-[0_15px_40px_rgba(196,90,0,0.35)] hover:scale-[1.02] transition-all duration-300"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-center sm:text-left">
               <div className="rounded-full bg-[#8B0000] p-3 text-white shadow-lg">
-                <Rss className="w-5 h-5" />
+                <Rss className="w-4 h-4 md:w-5 md:h-5" />
               </div>
 
               <div>
@@ -177,7 +177,7 @@ export default function PulakSagarPage() {
       </header>
 
       {/* 🌟 BIOGRAPHY */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -194,9 +194,9 @@ export default function PulakSagarPage() {
           </h2>
 
           {/* Content */}
-          <div className="space-y-8 text-lg leading-relaxed text-[#3B1A00] text-justify">
+          <div className="space-y-6 md:space-y-8 text-base sm:text-lg leading-7 md:leading-relaxed text-[#3B1A00] text-left md:text-left md:text-justify break-words">
             {/* 🌸 Image + Text Layout (Image Left) */}
-            <div className="md:flex md:items-start md:gap-10 md:flex-row-reverse">
+            <div className="flex flex-col md:flex-row-reverse md:items-start gap-8 md:gap-10">
               {/* Text */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -228,7 +228,7 @@ export default function PulakSagarPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="relative mt-6 md:mt-0 md:w-[340px] flex-shrink-0"
+                className="relative mt-2 md:mt-0 w-full md:w-[340px] flex-shrink-0"
               >
                 {/* Golden glow behind the image */}
                 <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#FFD97A]/50 via-[#FFF6C5]/40 to-transparent blur-md"></div>
@@ -236,9 +236,9 @@ export default function PulakSagarPage() {
                 <Image
                   src="/images/DSC_3635.JPG"
                   alt="Acharyashri Pulak Sagar Ji"
-                  width={340}
-                  height={500}
-                  className="relative rounded-3xl border-4 border-[#FFD97A]/70 shadow-[0_0_40px_rgba(255,217,122,0.4)] object-cover mx-auto"
+                  width={320}
+                  height={460}
+                  className="relative rounded-3xl border-4 border-[#FFD97A]/70 shadow-[0_0_40px_rgba(255,217,122,0.4)] object-cover mx-auto w-full max-w-[280px] sm:max-w-[320px]"
                 />
 
                 <p className="text-center text-sm mt-3 text-[#7A4000] italic font-medium">
@@ -328,12 +328,12 @@ export default function PulakSagarPage() {
                 <span>{i.title}</span>
               </div>
               <p className="mt-2 text-sm text-[#6B3F00]">{i.date}</p>
-              <p className="text-[#3A0A00] text-justify">{i.place}</p>
+              <p className="text-[#3A0A00] text-left md:text-justify">{i.place}</p>
             </motion.div>
           ))}
         </div>
 
-        <p className="mt-6 text-[#3A0A00] text-justify">
+        <p className="mt-6 text-[#3A0A00] text-left md:text-justify">
           With a single purpose — <em>seva</em> and <em>dharma-prabhavana</em> — Gurudev reached even the most remote
           villages lacking basic infrastructure, ensuring the message of truth and non-violence touches every heart.
         </p>
@@ -378,7 +378,7 @@ export default function PulakSagarPage() {
                 <span className="text-[#C45A00] mt-1">{item.icon}</span>
                 <div>
                   <p className="text-sm uppercase tracking-wide text-[#A43B00]">{item.label}</p>
-                  <p className="mt-1 text-[#3A0A00] text-justify">{item.value}</p>
+                  <p className="mt-1 text-[#3A0A00] text-left md:text-justify">{item.value}</p>
                 </div>
               </div>
             </motion.div>
@@ -386,7 +386,7 @@ export default function PulakSagarPage() {
         </div>
 
         {/* Chaturmas note */}
-        <p className="mt-6 text-[#3A0A00] text-justify">
+        <p className="mt-6 text-[#3A0A00] text-left md:text-justify">
           <strong>Chaturmas (since 1993)</strong>: Baroda, Etawah, Kanpur, Delhi, Saharanpur, Meerut, Agra, Gwalior,
           Jaipur, Indore, Nagpur, Mumbai, Surat, Udaipur, Banswara, Sikar, Ajmer, Baramati, Pune, Aurangabad, and
           multiple stays at Jinsharnam Teerthdham (M.H.), among others.
@@ -548,7 +548,7 @@ export default function PulakSagarPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
         <div className="rounded-3xl bg-gradient-to-br from-[#FFF8E1] to-[#FFE8A0] border border-[#FFD700]/40 p-8 md:p-10 shadow-[0_20px_60px_-15px_rgba(196,90,0,0.25)]">
           <h2 className="text-2xl md:text-3xl font-serif text-[#8B0000] mb-4">Profile Handler</h2>
-          <p className="text-justify">
+          <p className="text-left md:text-justify">
             All social media channels of <strong>Bharat Gaurav Acharyashri Pulak Sagar Ji</strong> are operated by
             <strong> Jinsharnam Media</strong>.
           </p>
@@ -561,7 +561,7 @@ export default function PulakSagarPage() {
             </Link> */}
             <Link
               href="/contact"
-              className="inline-block rounded-full bg-[#C45A00] px-6 py-2 font-semibold text-white shadow hover:scale-[1.02] transition"
+              className="inline-block rounded-full bg-[#C45A00] px-5 md:px-6 py-2.5 text-sm md:text-base text-center font-semibold text-white shadow hover:scale-[1.02] transition"
             >
               Blessings to Jinsharnam Media
             </Link>
