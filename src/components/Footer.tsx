@@ -86,12 +86,8 @@ export default function Footer() {
             "
           >
             <span className="text-[#F5D8AA]">
-              Jinsharnam
+              Shri Digambar Jain Jinsharnam Tirth Trust (Regd.)
             </span>{" "}
-            
-            <span className="text-[#B8854A]">
-              Tirth Dham
-            </span>
           </h2>
 
           {/* DESCRIPTION */}
@@ -202,11 +198,9 @@ export default function Footer() {
                     Address
                   </p>
 
-                  <p className="text-[#F0DDC7] leading-7 text-sm">
+                  <p className="text-[#F0DDC7] leading-7 text-sm font-serif">
 
-                    Mumbai-Surat Highway No. 48,
-                    Uplat, Palghar,
-                    Maharashtra - 401606
+                    Mumbai-Surat Highway No 48, Mukaam Post, Uplat, Tehsil Talasari, District Palghar, Maharashtra-401606
 
                   </p>
 
@@ -307,7 +301,7 @@ export default function Footer() {
 
                   <p className="text-[#F0DDC7] text-sm break-all leading-7">
 
-                    info@jinsharnamtirth.org
+                    jinsharnam@gmail.com
 
                   </p>
 
@@ -322,222 +316,292 @@ export default function Footer() {
         </div>
 
         {/* ========================================================= */}
-        {/* QUICK LINKS */}
+        {/* QUICK LINKS + CENTRAL OFFICE */}
         {/* ========================================================= */}
 
-        <div className="mt-20 md:mt-24 text-center">
-
-          <h3
-            className="
-              text-2xl md:text-2xl
-              font-serif
-              text-[#F5D8AA]
-              mb-10 md:mb-12
-            "
-          >
-
-            Quick Links
-
-          </h3>
+        <div className="mt-50 md:mt-20">
 
           <div
             className="
-              grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
-              gap-y-5 md:gap-y-6
-              gap-x-4 md:gap-x-10
-              max-w-5xl mx-auto
-            "
-          >
+              grid
+              md:grid-cols-2
+              gap-8
 
-            {links.map(([name, href], i) => (
-
-              <Link
-                key={i}
-                href={href}
-                className="
-                  group
-                  flex items-center justify-center gap-2 md:gap-3
-                  text-[#D4BEA2]
-                  hover:text-[#F5D8AA]
-                  transition duration-300
-                  text-sm md:text-[15px]
-                "
-              >
-
-                <div
-                  className="
-                    w-1.5 h-1.5
-                    rounded-full
-                    bg-amber-500
-                    group-hover:scale-125
-                    transition
-                  "
-                ></div>
-
-                <span>{name}</span>
-
-                <ArrowRight
-                  className="
-                    hidden md:block
-                    w-4 h-4
-                    opacity-0
-                    -translate-x-2
-                    group-hover:translate-x-0
-                    group-hover:opacity-100
-                    transition duration-300
-                  "
-                  strokeWidth={1.7}
-                />
-
-              </Link>
-
-            ))}
-
-          </div>
-
-        </div>        
-
-        {/* ========================================================= */}
-        {/* CENTRAL OFFICE */}
-        {/* ========================================================= */}
-
-        <div className="mt-20 md:mt-24">
-
-          <div
-            className="
-              max-w-5xl
+              max-w-6xl
               mx-auto
-              bg-gradient-to-r
-              from-[#2B1400]
-              to-[#1B0B00]
-              border border-white/5
-              rounded-[28px] md:rounded-[32px]
-              px-5 py-8 md:px-10 md:py-10
-              overflow-hidden
-              relative
+
+              items-stretch
             "
           >
 
-            {/* Glow Effect */}
+            {/* QUICK LINKS */}
 
-            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-3xl rounded-full"></div>
+            <div
+              className="
+                h-full
 
-            <div className="relative text-center">
+                rounded-[26px]
 
-              {/* LOGO */}
+                p-8
 
-              <div
-                className="
-                  w-10 h-10 md:w-15 md:h-15
-                  rounded-full
-                  overflow-hidden
-                  border border-amber-400/20
-                  shadow-[0_0_40px_rgba(255,180,80,0.12)]
-                  mx-auto mb-6
-                  bg-black/20
-                "
-              >
+                bg-gradient-to-br
+                from-[#2A1300]
+                via-[#211000]
+                to-[#170800]
 
-                <Image
-                  src="/images/jinsharnammedia.png"
-                  alt="Jinsharnam Media"
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
+                border
+                border-amber-500/10
 
-              </div>
+                shadow-[0_10px_40px_rgba(255,170,60,0.05)]
 
-              {/* TITLE */}
+                hover:border-amber-500/20
 
-              <p
-                className="
-                  text-[#B89063]
-                  text-[10px] md:text-xs
-                  tracking-[4px]
-                  uppercase
-                  mb-3
-                "
-              >
-
-                Central Office & Media Partner
-
-              </p>
+                transition-all
+                duration-300
+              "
+            >
 
               <h3
                 className="
-                  text-2xl md:text-4xl
+                  text-lg
                   font-serif
                   text-[#F5D8AA]
-                  mb-4
-                "
-              >
-
-                Jinsharnam Media
-
-              </h3>
-
-              {/* WEBSITE */}
-
-              <a
-                href="https://jinsharnammedia.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  inline-flex items-center gap-2
-                  text-amber-400
-                  hover:text-amber-300
-                  transition
-                  text-sm md:text-base
                   mb-8
                 "
               >
+                Quick Links
+              </h3>
 
-                www.jinsharnammedia.com
+              <div className="grid grid-cols-2 gap-y-5 gap-x-10">
 
-                <ExternalLink
-                  className="w-4 h-4"
-                  strokeWidth={1.7}
-                />
+                {links.map(([name, href], i) => (
 
-              </a>
+                  <Link
+                    key={i}
+                    href={href}
+                    className="
+                      group
+                      text-[16px]
 
-              {/* ADDRESS */}
+                      flex
+                      items-center
+                      gap-3
 
-              <div className="max-w-2xl mx-auto">
+                      text-[#D4BEA2]
+                      hover:text-[#F5D8AA]
 
-                <p
+                      transition
+                    "
+                  >
+
+                    <div
+                      className="
+                        w-1.5 h-1.5
+                        rounded-full
+                        bg-amber-500
+                      "
+                    />
+
+                    <span className="font-serif text-[15px]">
+                      {name}
+                    </span>
+
+                  </Link>
+
+                ))}
+
+              </div>
+
+            </div>
+
+            {/* CENTRAL OFFICE */}
+
+            <div
+              className="
+                bg-white/[0.02]
+
+                border
+                border-white/5
+
+                rounded-[26px]
+
+                p-8
+
+                backdrop-blur-sm
+
+                h-full
+              "
+            >
+
+              <h3
+                className="
+                  text-lg
+                  font-serif
+                  text-[#F5D8AA]
+                  mb-8
+                "
+              >
+                Delhi Office & Media Partner
+              </h3>
+
+              <div className="flex items-start gap-5">
+
+                <div
                   className="
-                    text-[#EBD8C1]
-                    leading-8
-                    text-sm md:text-[15px]
+                    w-12 h-12
+                    rounded-full
+                    overflow-hidden
+                    border border-amber-400/20
+                    flex-shrink-0
                   "
                 >
 
-                  Vatsalya Bhawan <br />
+                  <Image
+                    src="/images/jinsharnammedia.png"
+                    alt="Media"
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
 
-                  P-75, Street No. 5,
-                  Bihari Colony Extension,
-                  Bihari Colony, Shahdara,
-                  Delhi - 110032,
-                  India
+                </div>
 
-                </p>
+                <div>
 
-                {/* PHONE */}
+                  <h4
+                    className="
+                      text-lg
+                      font-serif
+                      text-[#F5D8AA]
+                      mb-3
+                    "
+                  >
+                    Jinsharnam Media
+                  </h4>
 
-                <p
-                  className="
-                    text-[#D8B287]
-                    mt-5
-                    text-sm md:text-[15px]
-                    tracking-wide
-                  "
-                >
+                  <a
+                    href="https://jinsharnammedia.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      group
 
-                  +91 9810900699 • +91 9810900042
+                      inline-flex
+                      items-center
+                      gap-3
 
-                </p>
+                      px-4
+                      py-2.5
+
+                      rounded-full
+
+                      bg-gradient-to-r
+                      from-amber-500/10
+                      to-amber-400/5
+
+                      border
+                      border-amber-400/15
+
+                      hover:border-amber-300/40
+                      hover:bg-amber-500/10
+
+                      transition-all
+                      duration-300
+
+                      mb-5
+                    "
+                  >
+
+                    <div
+                      className="
+                        w-7 h-7
+
+                        rounded-full
+
+                        bg-amber-500/15
+
+                        flex
+                        items-center
+                        justify-center
+
+                        text-[14px]
+                      "
+                    >
+                      🌐
+                    </div>
+
+                    <div className="leading-tight">
+
+                      <div
+                        className="
+                          text-[9px]
+
+                          uppercase
+
+                          tracking-[2px]
+
+                          text-[#B89063]
+                        "
+                      >
+                        Visit Website
+                      </div>
+
+                      <div
+                        className="
+                          text-[#F5D8AA]
+                          text-sm
+
+                          group-hover:text-white
+                        "
+                      >
+                        jinsharnammedia.com
+                      </div>
+
+                    </div>
+
+                    <ExternalLink
+                      className="
+                        w-3.5
+                        h-3.5
+
+                        text-amber-400
+
+                        group-hover:translate-x-1
+                        group-hover:-translate-y-[1px]
+
+                        transition
+                      "
+                    />
+
+                  </a>
+
+                  <p
+                    className="
+                      text-[#D4BEA2]
+                      text-[13px]
+                      leading-7
+                    "
+                  >
+                    Vatsalya Bhawan<br />
+
+                    P-75, Street No. 5, 
+
+                    Bihari Colony Extension,
+                    Shahdara,
+                    Delhi – 110032
+                  </p>
+
+                  <p
+                    className="
+                      mt-4
+                      text-[#C9A06A]
+                      text-sm
+                    "
+                  >
+                    +91 9810900699 | +91 9810900042
+                  </p>
+
+                </div>
 
               </div>
 
@@ -547,24 +611,10 @@ export default function Footer() {
 
         </div>
 
-        
-
-        {/* DIVIDER */}
-
-        <div
-          className="
-            my-10 md:my-14
-            h-[1px]
-            bg-gradient-to-r
-            from-transparent
-            via-amber-500/20
-            to-transparent
-          "
-        ></div>
 
         {/* COPYRIGHT */}
 
-        <div className="text-center px-2">
+        <div className="text-center px-10 pt-20">
 
           <p className="text-[#A98A67] text-xs sm:text-sm leading-7">
 

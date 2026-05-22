@@ -104,7 +104,7 @@ export default function LatestUpdatesSection() {
                 leading-tight
               "
             >
-              Jinsharnam Tirth Updates
+              Latest Updates
             </h2>
 
             <p 

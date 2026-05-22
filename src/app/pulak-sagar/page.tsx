@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
 import PulakSagarLiveSection from "../../components/PulakSagarLiveSection";
+import DonationSection from "../../components/DonationSection";
 import {
   BookOpen,
   Calendar,
@@ -167,7 +168,7 @@ export default function PulakSagarPage() {
                 <p className="text-sm uppercase tracking-wider text-[#8B0000] font-semibold">
                   Official Digital Presence
                 </p>
-                <h3 className="text-lg md:text-2xl font-bold text-[#5A1A00] group-hover:text-[#8B0000]">
+                <h3 className="text-m md:text-lg font-bold text-[#5A1A00] group-hover:text-[#8B0000]">
                   Visit Official Website of Pulak Sagar Ji
                 </h3>
               </div>
@@ -568,6 +569,7 @@ export default function PulakSagarPage() {
           </div>
         </div>
       </section>
+      <DonationSection />
     </section>
   );
 }

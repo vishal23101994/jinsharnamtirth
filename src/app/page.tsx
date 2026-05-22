@@ -16,10 +16,7 @@ export default function Home() {
       <WorkIntro/>
       <PulakSagarMessage />
       <LatestUpdatesSection />    
-
       {/* Latest News / Updates */}
-      
-
       <GlimpsesSection />
 
       <DonationSection />

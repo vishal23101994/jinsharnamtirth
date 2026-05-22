@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
+import SocialSidebar from "../components/SocialSidebar";
 
 import {
   Noto_Serif,
@@ -125,6 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Footer />
         <BackToTop />
+        <SocialSidebar />
 
       </body>
     </html>

@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 import DonationSection from "../../components/DonationSection";
 
@@ -109,6 +109,180 @@ function MissionIntro() {
       <div className="flex justify-center mt-24">
         <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
       </div>
+
+    </section>
+  );
+}
+
+function ChatravasGallery() {
+
+  const hostelGallery = [
+    "/tirth/1.1.jpeg",
+    "/tirth/1.2.jpeg",
+    "/tirth/1.3.jpeg",
+    "/tirth/1.4.jpeg",
+    "/tirth/1.5.jpeg",
+    "/tirth/1.6.jpeg",
+  ];
+
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openImage = (img: string, index: number) => {
+    setActiveImage(img);
+    setActiveIndex(index);
+  };
+
+  const prevImage = () => {
+    const index =
+      activeIndex === 0
+        ? hostelGallery.length - 1
+        : activeIndex - 1;
+
+    setActiveIndex(index);
+    setActiveImage(hostelGallery[index]);
+  };
+
+  const nextImage = () => {
+    const index =
+      activeIndex === hostelGallery.length - 1
+        ? 0
+        : activeIndex + 1;
+
+    setActiveIndex(index);
+    setActiveImage(hostelGallery[index]);
+  };
+
+  return (
+    <section className="bg-gradient-to-b from-[#FFF8E7] to-[#FFECC7] py-20">
+
+      <div className="max-w-7xl mx-auto px-6">
+
+        <h2 className="text-4xl text-center font-serif text-[#4B1E00] mb-14">
+          Jinsharnam Chatravas
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+
+          {hostelGallery.map((img, i) => (
+
+            <motion.div
+              key={i}
+              whileHover={{ y: -8 }}
+              className="cursor-pointer"
+              onClick={() => openImage(img, i)}
+            >
+
+              <img
+                src={img}
+                alt={`Gallery ${i + 1}`}
+                className="
+                  h-[360px]
+                  w-full
+                  object-cover
+                  rounded-2xl
+                  border
+                  border-amber-300
+                  shadow-[0_15px_40px_rgba(251,191,36,0.25)]
+                  hover:shadow-[0_25px_60px_rgba(251,191,36,0.45)]
+                  transition
+                "
+              />
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* MODAL */}
+
+      {activeImage && (
+
+        <div className="fixed inset-0 z-[9999] bg-black/95">
+
+          <button
+            onClick={() => setActiveImage(null)}
+            className="
+              absolute
+              top-6
+              right-6
+              text-white
+              text-5xl
+              z-50
+            "
+          >
+            ×
+          </button>
+
+          <button
+            onClick={prevImage}
+            className="
+              absolute
+              left-4
+              md:left-10
+              top-1/2
+              -translate-y-1/2
+              text-white
+              text-6xl
+            "
+          >
+            ‹
+          </button>
+
+          <div className="h-full flex items-center justify-center px-6">
+
+            <img
+              src={activeImage}
+              alt="Preview"
+              className="
+                max-h-[90vh]
+                max-w-[92vw]
+                object-contain
+              "
+            />
+
+          </div>
+
+          <button
+            onClick={nextImage}
+            className="
+              absolute
+              right-4
+              md:right-10
+              top-1/2
+              -translate-y-1/2
+              text-white
+              text-6xl
+            "
+          >
+            ›
+          </button>
+
+          <a
+            href={activeImage}
+            download
+            className="
+              absolute
+              bottom-8
+              left-1/2
+              -translate-x-1/2
+              px-8
+              py-3
+              rounded-full
+              bg-amber-400
+              text-[#4B1E00]
+              font-semibold
+            "
+          >
+            Download
+          </a>
+
+        </div>
+
+      )}
 
     </section>
   );
@@ -350,6 +524,7 @@ export default function Mission() {
 
       <MissionHero />
       <MissionIntro />
+      <ChatravasGallery />
       <MissionPillars />
       <MissionMessage />
       <DonationSection />
