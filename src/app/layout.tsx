@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 import SocialSidebar from "../components/SocialSidebar";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 import {
   Noto_Serif,
@@ -127,6 +128,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <BackToTop />
         <SocialSidebar />
+        <WhatsAppButton />
 
       </body>
     </html>

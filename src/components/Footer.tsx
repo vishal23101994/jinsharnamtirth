@@ -587,7 +587,7 @@ export default function Footer() {
                     P-75, Street No. 5, 
 
                     Bihari Colony Extension,
-                    Shahdara,
+                    Shahdara, <br/>
                     Delhi – 110032
                   </p>
 
